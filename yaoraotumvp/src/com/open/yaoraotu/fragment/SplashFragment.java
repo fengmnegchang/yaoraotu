@@ -21,7 +21,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.open.android.activity.common.CommonALLActivity;
-import com.open.android.fragment.BaseV4MVPFragment;
+import com.open.android.fragment.BaseV4MVPPFragment;
 import com.open.android.json.CommonJson;
 import com.open.yaoraotu.R;
 import com.open.yaoraotu.presenter.SplashPresenter;
@@ -38,8 +38,7 @@ import com.open.yaoraotu.viewmodel.SplashViewModel;
  * @description:
  ***************************************************************************************************************************************************************************** 
  */
-public class SplashFragment extends BaseV4MVPFragment<CommonJson, SplashFragment> implements SplashViewModel<CommonJson, SplashPresenter> {
-	private SplashPresenter mPresenter;
+public class SplashFragment extends BaseV4MVPPFragment<CommonJson, SplashFragment,SplashPresenter> implements SplashViewModel<CommonJson, SplashPresenter> {
 
 	public static SplashFragment newInstance() {
 		Bundle arguments = new Bundle();
