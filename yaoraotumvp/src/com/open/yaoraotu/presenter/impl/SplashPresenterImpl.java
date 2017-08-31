@@ -20,7 +20,7 @@ import android.support.annotation.NonNull;
 
 import com.google.gson.Gson;
 import com.open.android.json.CommonJson;
-import com.open.android.mvp.base.CommonAsyncTaskPresenter;
+import com.open.android.mvp.base.CommonAsyncTaskPresenter2;
 import com.open.yaoraotu.activity.SplashActivity;
 import com.open.yaoraotu.application.CommonApplication;
 import com.open.yaoraotu.bean.PatchBean;
@@ -39,10 +39,7 @@ import com.taobao.sophix.SophixManager;
  * @description:
  ***************************************************************************************************************************************************************************** 
  */
-public class SplashPresenterImpl extends CommonAsyncTaskPresenter<CommonJson> implements SplashPresenter {
-	private final SplashViewModel mViewModel;
-	private Context mContext;
-
+public class SplashPresenterImpl extends CommonAsyncTaskPresenter2<CommonJson,SplashPresenter,SplashViewModel<CommonJson,SplashPresenter>> implements SplashPresenter {
 	private static final int SHOW_TIME_MIN = 3000;// 最小显示时间
 	private long mStartTime;// 开始时间
 	private static final int REQUEST_EXTERNAL_STORAGE_PERMISSION = 0;
