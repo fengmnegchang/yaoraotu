@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project
+    name="hosa"
+    basedir="/Users/master/gitmvp/yaoraotu/yaoraotumvp/lib"
+    default="makeSuperJar" > <!-- basedir 存放所有jar包路径 -->
+    <!-- 命令执行合并jar包 ant -buildfile /Users/master/gitmvp/yaoraotu/yaoraotumvp/build.xml -->
+
+    <target
+        name="makeSuperJar"
+        description="description" >
+
+        <jar destfile="classes2.jar" > <!-- destfile 目标文件名 xxx.jar -->
+          
+            <zipfileset src="guava-18.0.jar" />
+            
+        </jar>
+    </target>
+
+</project>
