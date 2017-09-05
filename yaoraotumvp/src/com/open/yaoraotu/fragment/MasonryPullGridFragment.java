@@ -15,6 +15,7 @@ import android.util.Log;
 
 import com.handmark.pulltorefresh.library.PullToRefreshBase.Mode;
 import com.open.android.fragment.common.CommonPullToRefreshGridMVPFragment;
+import com.open.android.fragment.common.CommonPullToRefreshGridMVPFragment2;
 import com.open.android.mvp.presenter.CommonPresenter;
 import com.open.android.mvp.view.CommonView;
 import com.open.yaoraotu.adapter.MasonryAdapter;
@@ -32,8 +33,8 @@ import com.open.yaoraotu.json.MasonryJson;
  * @description:
  ***************************************************************************************************************************************************************************** 
  */
-public class MasonryPullGridFragment extends CommonPullToRefreshGridMVPFragment<MasonryBean, MasonryJson, CommonPresenter> implements CommonView<MasonryJson, CommonPresenter> {
-	private MasonryAdapter mAdapter;
+public class MasonryPullGridFragment extends CommonPullToRefreshGridMVPFragment2<MasonryBean, MasonryJson, CommonPresenter,MasonryAdapter> 
+implements CommonView<MasonryJson, CommonPresenter> {
 
 	public static MasonryPullGridFragment newInstance(boolean isVisibleToUser) {
 		MasonryPullGridFragment fragment = new MasonryPullGridFragment();

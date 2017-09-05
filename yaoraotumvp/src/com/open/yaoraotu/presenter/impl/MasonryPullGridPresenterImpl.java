@@ -59,7 +59,7 @@ public class MasonryPullGridPresenterImpl extends CommonAsyncTaskPresenter2<Maso
 		MasonryJson mMArticleJson = new MasonryJson();
 		String href = url;
 		if(pageNo>1){
-			 
+			href = url+"list_"+pageNo+".html";
 		}
 		String typename = "YaoRaoTuJsoupService-getPliList-"+pageNo;
 		if(NetWorkUtils.isNetworkAvailable(mContext)){
@@ -83,17 +83,17 @@ public class MasonryPullGridPresenterImpl extends CommonAsyncTaskPresenter2<Maso
 		}
 		return mMArticleJson;
 	}
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * com.open.android.fragment.common.CommonPullToRefreshListFragment#onCallback
-	 * (com.open.android.json.CommonJson)
-	 */
-	@Override
-	public void onCallback(MasonryJson result) {
-		mViewModel.onCallback(result);
-	}
+//	/*
+//	 * (non-Javadoc)
+//	 * 
+//	 * @see
+//	 * com.open.android.fragment.common.CommonPullToRefreshListFragment#onCallback
+//	 * (com.open.android.json.CommonJson)
+//	 */
+//	@Override
+//	public void onCallback(MasonryJson result) {
+//		mViewModel.onCallback(result);
+//	}
 
 
 }
