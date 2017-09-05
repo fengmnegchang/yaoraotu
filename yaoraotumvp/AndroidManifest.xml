@@ -45,6 +45,12 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:description="@string/app_webview_desp" >
         </activity>
+        <!-- Masonry列表grid -->
+        <activity
+            android:name="com.open.yaoraotu.activity.MasonryPullGridActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_masonry_pullgrid_desp" >
+        </activity>
         <!-- 所有类列表 -->
         <activity
             android:name="com.open.android.activity.common.CommonALLActivity"

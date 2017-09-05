@@ -28,6 +28,10 @@ import com.facebook.common.util.ByteConstants;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.imagepipeline.core.ImagePipelineConfig;
 import com.google.gson.Gson;
+import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.open.yaoraotu.ElnImageDownloaderFetcher;
 import com.open.yaoraotu.bean.PatchBean;
 import com.taobao.sophix.SophixManager;
@@ -77,7 +81,13 @@ public class CommonApplication extends Application{
                 .setNetworkFetcher(new ElnImageDownloaderFetcher())
                 .setMainDiskCacheConfig(diskCacheConfig).build();
         Fresco.initialize(this, config);
- 
+//      //创建默认的ImageLoader配置参数
+//        ImageLoaderConfiguration configuration =   new ImageLoaderConfiguration.Builder(this).threadPriority(Thread.NORM_PRIORITY - 2).denyCacheImageMultipleSizesInMemory()
+//                .diskCacheFileNameGenerator(new Md5FileNameGenerator()).diskCacheSize(50 * 1024 * 1024) // 50 Mb
+//                .tasksProcessingOrder(QueueProcessingType.LIFO).writeDebugLogs() // Remove for release app
+//                .build();
+//        //Initialize ImageLoader with configuration.
+//        ImageLoader.getInstance().init(configuration);
     }
     
  
