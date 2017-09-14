@@ -9,4 +9,5 @@
 	<string name="app_newlist_pulllist_desp">new list列表</string>
 	<string name="app_top_theme_pullgrid_desp">top theme列表grid</string>
 	<string name="app_leftmenu_pulllist_desp">left menu</string>
+	<string name="app_submenu_indicator_desp">sub menu indicator</string>
 </resources>

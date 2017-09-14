@@ -75,6 +75,13 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:description="@string/app_leftmenu_pulllist_desp" >
         </activity>
+        <!--submenu Indicator 列表 -->
+        <activity
+            android:name="com.open.yaoraotu.activity.SubMenuIndicatorFragmentActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_submenu_indicator_desp"
+            android:theme="@style/Theme.PageIndicatorDefaults"  >
+        </activity>
         <!-- 所有类列表 -->
         <activity
             android:name="com.open.android.activity.common.CommonALLActivity"
