@@ -2,7 +2,7 @@
  *****************************************************************************************************************************************************************************
  * 
  * @author :fengguangjing
- * @createTime:2017-9-14下午1:59:04
+ * @createTime:2017-9-5上午11:19:26
  * @version:4.2.4
  * @modifyTime:
  * @modifyAuthor:
@@ -16,22 +16,22 @@ import android.content.Intent;
 
 import com.open.android.activity.common.CommonTitleBarActivity;
 import com.open.yaoraotu.R;
-import com.open.yaoraotu.fragment.HotTopPullListFragment;
-import com.open.yaoraotu.presenter.impl.HotTopPullListPresenterImpl;
+import com.open.yaoraotu.fragment.TopThemePullGridFragment;
+import com.open.yaoraotu.presenter.impl.TopThemePullGridPresenterImpl;
 import com.open.yaoraotu.utils.UrlUtils;
 
 /**
  *****************************************************************************************************************************************************************************
  * 
  * @author :fengguangjing
- * @createTime:2017-9-14下午1:59:04
+ * @createTime:2017-9-5上午11:19:26
  * @version:4.2.4
  * @modifyTime:
  * @modifyAuthor:
  * @description:
  *****************************************************************************************************************************************************************************
  */
-public class HotTopPullListActivity extends CommonTitleBarActivity{
+public class TopThemePullGridActivity extends CommonTitleBarActivity{
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -44,7 +44,7 @@ public class HotTopPullListActivity extends CommonTitleBarActivity{
 		if (getIntent().getStringExtra("URL") != null) {
 			url = getIntent().getStringExtra("URL");
 		} else {
-			url = UrlUtils.YAORAOTU_TAOTU_XIURENWANG;
+			url = UrlUtils.YAORAOTU_TAOTU_TUIGIRL;
 		}
 		setCenterTextValue(getResources().getString(R.string.app_name));
 		addfragment();
@@ -57,19 +57,19 @@ public class HotTopPullListActivity extends CommonTitleBarActivity{
 	@Override
 	public void addfragment() {
 		// TODO Auto-generated method stub
-		HotTopPullListFragment fragment =  HotTopPullListFragment.newInstance(true);
+		TopThemePullGridFragment fragment =  TopThemePullGridFragment.newInstance(true);
 		getSupportFragmentManager().beginTransaction().replace(R.id.layout_content, fragment).commit();
 		
 		// Create the presenter
-		new HotTopPullListPresenterImpl(this, fragment,url);
+		new TopThemePullGridPresenterImpl(this, fragment,url);
 //		Fragment fragment = MArticlePullGridMVPFragment.newInstance(url, true);
 //		getSupportFragmentManager().beginTransaction().replace(R.id.layout_content, fragment).commit();
 	}
 
-	public static void startHotTopPullListActivity(Context context, String url) {
+	public static void startTopThemePullGridActivity(Context context, String url) {
 		Intent intent = new Intent();
 		intent.putExtra("URL", url);
-		intent.setClass(context, HotTopPullListActivity.class);
+		intent.setClass(context, TopThemePullGridActivity.class);
 		context.startActivity(intent);
 	}
 }

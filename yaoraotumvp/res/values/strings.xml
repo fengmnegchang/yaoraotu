@@ -6,4 +6,6 @@
 	<string name="app_webview_desp">app webview</string>
 	<string name="app_masonry_pullgrid_desp">Masonry列表grid</string>
 	<string name="app_hottop_pulllist_desp">hot top列表</string>
+	<string name="app_newlist_pulllist_desp">new list列表</string>
+	<string name="app_top_theme_pullgrid_desp">top theme列表grid</string>
 </resources>

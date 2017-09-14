@@ -57,6 +57,18 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:description="@string/app_hottop_pulllist_desp" >
         </activity>
+        <!-- NewList列表 -->
+        <activity
+            android:name="com.open.yaoraotu.activity.NewListPullListActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_newlist_pulllist_desp" >
+        </activity>
+        <!-- top theme grid -->
+        <activity
+            android:name="com.open.yaoraotu.activity.TopThemePullGridActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_top_theme_pullgrid_desp" >
+        </activity>
         <!-- 所有类列表 -->
         <activity
             android:name="com.open.android.activity.common.CommonALLActivity"

@@ -46,6 +46,7 @@ public class MasonryPullGridActivity extends CommonTitleBarActivity{
 		} else {
 			url = UrlUtils.YAORAOTU_TAOTU_TUIGIRL;
 		}
+		setCenterTextValue(getResources().getString(R.string.app_name));
 		addfragment();
 	}
 	/*
