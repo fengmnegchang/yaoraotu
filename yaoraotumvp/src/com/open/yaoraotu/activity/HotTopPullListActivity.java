@@ -17,7 +17,7 @@ import android.content.Intent;
 import com.open.android.activity.common.CommonTitleBarActivity;
 import com.open.yaoraotu.R;
 import com.open.yaoraotu.fragment.HotTopPullListFragment;
-import com.open.yaoraotu.presenter.impl.HotTopPullListPresenterImpl;
+import com.open.yaoraotu.presenter.impl.ReflectJsoupPresenterImpl;
 import com.open.yaoraotu.utils.UrlUtils;
 
 /**
@@ -61,7 +61,8 @@ public class HotTopPullListActivity extends CommonTitleBarActivity{
 		getSupportFragmentManager().beginTransaction().replace(R.id.layout_content, fragment).commit();
 		
 		// Create the presenter
-		new HotTopPullListPresenterImpl(this, fragment,url);
+//		new HotTopPullListPresenterImpl(this, fragment,url);
+		new ReflectJsoupPresenterImpl(this, fragment,url,"getHotList");
 //		Fragment fragment = MArticlePullGridMVPFragment.newInstance(url, true);
 //		getSupportFragmentManager().beginTransaction().replace(R.id.layout_content, fragment).commit();
 	}

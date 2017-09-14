@@ -17,7 +17,7 @@ import android.content.Intent;
 import com.open.android.activity.common.CommonTitleBarActivity;
 import com.open.yaoraotu.R;
 import com.open.yaoraotu.fragment.TopThemePullGridFragment;
-import com.open.yaoraotu.presenter.impl.TopThemePullGridPresenterImpl;
+import com.open.yaoraotu.presenter.impl.ReflectJsoupPresenterImpl;
 import com.open.yaoraotu.utils.UrlUtils;
 
 /**
@@ -61,7 +61,7 @@ public class TopThemePullGridActivity extends CommonTitleBarActivity{
 		getSupportFragmentManager().beginTransaction().replace(R.id.layout_content, fragment).commit();
 		
 		// Create the presenter
-		new TopThemePullGridPresenterImpl(this, fragment,url);
+		new ReflectJsoupPresenterImpl(this, fragment,url,"getTopTheme");
 //		Fragment fragment = MArticlePullGridMVPFragment.newInstance(url, true);
 //		getSupportFragmentManager().beginTransaction().replace(R.id.layout_content, fragment).commit();
 	}

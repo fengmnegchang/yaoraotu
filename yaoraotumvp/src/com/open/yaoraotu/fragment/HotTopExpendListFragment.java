@@ -11,18 +11,14 @@
  */
 package com.open.yaoraotu.fragment;
 
-import android.util.Log;
-
-import com.handmark.pulltorefresh.library.PullToRefreshBase.Mode;
-import com.open.android.fragment.common.CommonPullToRefreashListMVPFragment2;
+import com.open.android.fragment.common.CommonExpendListMVPFragment;
 import com.open.android.mvp.presenter.CommonPresenter;
-import com.open.android.mvp.view.CommonView;
 import com.open.yaoraotu.adapter.HotTopAdapter;
 import com.open.yaoraotu.bean.MasonryBean;
 import com.open.yaoraotu.json.MasonryJson;
 
 /**
- *****************************************************************************************************************************************************************************
+ ***************************************************************************************************************************************************************************** 
  * 
  * @author :fengguangjing
  * @createTime:2017-9-14下午1:53:01
@@ -30,17 +26,16 @@ import com.open.yaoraotu.json.MasonryJson;
  * @modifyTime:
  * @modifyAuthor:
  * @description:
- *****************************************************************************************************************************************************************************
+ ***************************************************************************************************************************************************************************** 
  */
-public class HotTopPullListFragment extends CommonPullToRefreashListMVPFragment2<MasonryBean, MasonryJson, CommonPresenter, HotTopAdapter>
-{
-	public static HotTopPullListFragment newInstance(boolean isVisibleToUser) {
-		HotTopPullListFragment fragment = new HotTopPullListFragment();
+public class HotTopExpendListFragment extends CommonExpendListMVPFragment<MasonryBean, MasonryJson, CommonPresenter, HotTopAdapter> {
+	public static HotTopExpendListFragment newInstance(boolean isVisibleToUser) {
+		HotTopExpendListFragment fragment = new HotTopExpendListFragment();
 		fragment.setFragment(fragment);
 		fragment.setUserVisibleHint(isVisibleToUser);
 		return fragment;
 	}
-	
+
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -50,12 +45,15 @@ public class HotTopPullListFragment extends CommonPullToRefreashListMVPFragment2
 	public void initValues() {
 		// TODO Auto-generated method stub
 		mAdapter = new HotTopAdapter(getActivity(), list);
-		mPullToRefreshListView.setAdapter(mAdapter);
-		mPullToRefreshListView.setMode(Mode.PULL_FROM_START);
+		mExpendListView.setAdapter(mAdapter);
 	}
-	
-	/* (non-Javadoc)
-	 * @see com.open.android.fragment.common.CommonPullToRefreashListMVPFragment#onCallback(com.open.android.json.CommonJson)
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * com.open.android.fragment.common.CommonPullToRefreashListMVPFragment#
+	 * onCallback(com.open.android.json.CommonJson)
 	 */
 	@Override
 	public void onCallback(MasonryJson result) {
@@ -65,20 +63,12 @@ public class HotTopPullListFragment extends CommonPullToRefreashListMVPFragment2
 		}
 		// TODO Auto-generated method stub
 		// TODO Auto-generated method stub
-		Log.i(TAG, "getMode ===" + mPullToRefreshListView.getCurrentMode());
-		if (mPullToRefreshListView.getCurrentMode() == Mode.PULL_FROM_START) {
-			list.clear();
-			list.addAll(result.getList());
-			pageNo = 1;
-			mPresenter.setPageNo(1);
-		} else {
-			if (result.getList() != null && result.getList().size() > 0) {
-				list.addAll(result.getList());
-			}
-		}
+		list.clear();
+		list.addAll(result.getList());
+		pageNo = 1;
+		mPresenter.setPageNo(1);
 		mAdapter.notifyDataSetChanged();
 		// Call onRefreshComplete when the list has been refreshed.
-		mPullToRefreshListView.onRefreshComplete();
 	}
- 
+
 }

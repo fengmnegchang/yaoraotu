@@ -2,7 +2,7 @@
  *****************************************************************************************************************************************************************************
  * 
  * @author :fengguangjing
- * @createTime:2017-9-14下午1:49:24
+ * @createTime:2017-9-14下午3:50:38
  * @version:4.2.4
  * @modifyTime:
  * @modifyAuthor:
@@ -25,6 +25,8 @@ import com.open.android.mvp.base.CommonAsyncTaskPresenter2;
 import com.open.android.mvp.presenter.CommonPresenter;
 import com.open.android.mvp.view.CommonView;
 import com.open.android.utils.NetWorkUtils;
+import com.open.android.utils.ReflectJsoupUtils;
+import com.open.yaoraotu.bean.MasonryBean;
 import com.open.yaoraotu.json.MasonryJson;
 import com.open.yaoraotu.jsoup.YaoRaoTuJsoupService;
 
@@ -32,19 +34,28 @@ import com.open.yaoraotu.jsoup.YaoRaoTuJsoupService;
  *****************************************************************************************************************************************************************************
  * 
  * @author :fengguangjing
- * @createTime:2017-9-14下午1:49:24
+ * @createTime:2017-9-14下午3:50:38
  * @version:4.2.4
  * @modifyTime:
  * @modifyAuthor:
  * @description:
  *****************************************************************************************************************************************************************************
  */
-public class NewListPullListPresenterImpl extends CommonAsyncTaskPresenter2<MasonryJson,CommonPresenter,CommonView<MasonryJson,CommonPresenter>>  {
-	public NewListPullListPresenterImpl(Context context, @NonNull CommonView view,String url) {
+public class ReflectJsoupPresenterImpl extends CommonAsyncTaskPresenter2<MasonryJson,CommonPresenter,CommonView<MasonryJson,CommonPresenter>>  {
+	
+	public ReflectJsoupPresenterImpl(Context context, @NonNull CommonView view,String url,String methodName) {
+		this(context, view, url, null, methodName, null, null);
+	}
+	
+	public ReflectJsoupPresenterImpl(Context context, @NonNull CommonView view,String url,String className,String methodName,Class[] parameterTypes,Object[] args) {
 		mViewModel = checkNotNull(view, "CommonView cannot be null!");
 		mViewModel.setPresenter(this);
 		this.mContext = context;
 		this.url = url;
+		this.className = className;
+		this.methodName = methodName;
+		this.parameterTypes = parameterTypes;
+		this.args = args;
 	}
 	
 	/*
@@ -61,10 +72,39 @@ public class NewListPullListPresenterImpl extends CommonAsyncTaskPresenter2<Maso
 		if(pageNo>1){
 			href = url+"list_"+pageNo+".html";
 		}
-		String typename = "YaoRaoTuJsoupService-getNewList-"+pageNo;
+		if(className==null){
+			className = YaoRaoTuJsoupService.class.getName();
+		}
+		if(parameterTypes==null){
+			parameterTypes = new Class[] { String.class,int.class };
+		}
+		
+		if(args==null){
+			args = new Object[] { href, pageNo};
+		}
+		
+		String typename = className+"-"+methodName+"-"+pageNo;
 		if(NetWorkUtils.isNetworkAvailable(mContext)){
 //			mMArticleJson.setList(YaoRaoTuJsoupService.getPliList(href, pageNo));
-			mMArticleJson.setList(YaoRaoTuJsoupService.getNewList(href, pageNo));
+			try {
+//				Class clazz = Class.forName("com.open.yaoraotu.jsoup.YaoRaoTuJsoupService");
+//		        Constructor c = clazz.getConstructor();
+//		        Method method = clazz.getMethod("getNewList", new Class[] { String.class,int.class });
+//		        List<MasonryBean> list = (List<MasonryBean>) method.invoke(c.newInstance(), new Object[] { href, pageNo});
+				
+//				List<MasonryBean> list = (List<MasonryBean>) ReflectJsoupUtils.invoke(YaoRaoTuJsoupService.class.getName(), "getNewList",
+//						 new Class[] { String.class,int.class }, 
+//						 new Object[] { href, pageNo});
+				
+				List<MasonryBean> list = (List<MasonryBean>) ReflectJsoupUtils.invoke(className, methodName,
+						parameterTypes, args);
+		        mMArticleJson.setList(list);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+			
+//			mMArticleJson.setList(YaoRaoTuJsoupService.getNewList(href, pageNo));
 			try {
 				//数据存储
 				Gson gson = new Gson();
