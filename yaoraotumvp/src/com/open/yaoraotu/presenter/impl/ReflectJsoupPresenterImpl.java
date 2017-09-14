@@ -69,9 +69,9 @@ public class ReflectJsoupPresenterImpl extends CommonAsyncTaskPresenter2<Masonry
 		// TODO Auto-generated method stub
 		MasonryJson mMArticleJson = new MasonryJson();
 		String href = url;
-		if(pageNo>1){
-			href = url+"list_"+pageNo+".html";
-		}
+//		if(pageNo>1){
+//			href = url+"list_"+pageNo+".html";
+//		}
 		if(className==null){
 			className = YaoRaoTuJsoupService.class.getName();
 		}

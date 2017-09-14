@@ -69,6 +69,12 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:description="@string/app_top_theme_pullgrid_desp" >
         </activity>
+        <!-- menu -->
+        <activity
+            android:name="com.open.yaoraotu.activity.LeftMenuPullListActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_leftmenu_pulllist_desp" >
+        </activity>
         <!-- 所有类列表 -->
         <activity
             android:name="com.open.android.activity.common.CommonALLActivity"
