@@ -5,4 +5,5 @@
 	<string name="app_all_desp">妖娆图+ all</string>
 	<string name="app_webview_desp">app webview</string>
 	<string name="app_masonry_pullgrid_desp">Masonry列表grid</string>
+	<string name="app_hottop_pulllist_desp">hot top列表</string>
 </resources>

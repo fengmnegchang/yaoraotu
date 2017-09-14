@@ -16,6 +16,7 @@
         android:layout_marginTop="3dp"
         android:layout_marginLeft="3dp"
         android:layout_alignParentLeft="true"
+        android:layout_marginRight="3dp"
         android:gravity="center"
         android:scaleType="fitXY" />
 
@@ -23,7 +24,7 @@
         android:id="@+id/text_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="25dp"
         android:layout_toRightOf="@+id/draweeview"
         android:text="推女郎气质美女陈秋雨大胆人体艺术写真套图"
         android:textSize="14sp" />
