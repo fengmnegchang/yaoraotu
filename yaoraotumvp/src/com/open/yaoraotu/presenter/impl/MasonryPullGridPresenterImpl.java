@@ -64,6 +64,7 @@ public class MasonryPullGridPresenterImpl extends CommonAsyncTaskPresenter2<Maso
 		String typename = "YaoRaoTuJsoupService-getPliList-"+pageNo;
 		if(NetWorkUtils.isNetworkAvailable(mContext)){
 			mMArticleJson.setList(YaoRaoTuJsoupService.getPliList(href, pageNo));
+			mMArticleJson.setHotlist(YaoRaoTuJsoupService.getHotList(href, pageNo));
 			try {
 				//数据存储
 				Gson gson = new Gson();

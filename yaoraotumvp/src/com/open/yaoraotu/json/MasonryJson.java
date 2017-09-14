@@ -29,6 +29,7 @@ import com.open.yaoraotu.bean.MasonryBean;
  */
 public class MasonryJson extends CommonJson {
 	private List<MasonryBean> list;
+	private List<MasonryBean> hotlist;
 
 	public List<MasonryBean> getList() {
 		return list;
@@ -36,6 +37,14 @@ public class MasonryJson extends CommonJson {
 
 	public void setList(List<MasonryBean> list) {
 		this.list = list;
+	}
+
+	public List<MasonryBean> getHotlist() {
+		return hotlist;
+	}
+
+	public void setHotlist(List<MasonryBean> hotlist) {
+		this.hotlist = hotlist;
 	}
 	
 
