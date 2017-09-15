@@ -22,6 +22,7 @@ import android.widget.TextView;
 import com.open.android.adapter.CommonAdapter;
 import com.open.yaoraotu.R;
 import com.open.yaoraotu.activity.AppWebViewActivity;
+import com.open.yaoraotu.activity.SubMenuIndicatorFragmentActivity;
 import com.open.yaoraotu.bean.MasonryBean;
 
 /**
@@ -48,7 +49,7 @@ public class MenuAdapter extends CommonAdapter<MasonryBean> {
 	 * android.view.View, android.view.ViewGroup)
 	 */
 	@Override
-	public View getView(int position, View convertView, ViewGroup parent) {
+	public View getView(final int position, View convertView, ViewGroup parent) {
 		// TODO Auto-generated method stub
 		ViewHolder viewHolder = null;
 		if (convertView == null) {
@@ -65,7 +66,8 @@ public class MenuAdapter extends CommonAdapter<MasonryBean> {
 			viewHolder.text_title.setOnClickListener(new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					AppWebViewActivity.startAppWebViewActivity(mContext, bean.getHref());
+//					AppWebViewActivity.startAppWebViewActivity(mContext, bean.getHref());
+					SubMenuIndicatorFragmentActivity.startSubMenuIndicatorFragmentActivity(mContext, bean.getHref(), position);
 				}
 			});
 		}

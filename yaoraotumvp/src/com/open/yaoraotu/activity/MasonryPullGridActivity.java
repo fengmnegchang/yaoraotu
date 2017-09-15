@@ -16,7 +16,7 @@ import android.content.Intent;
 
 import com.open.android.activity.common.CommonTitleBarActivity;
 import com.open.yaoraotu.R;
-import com.open.yaoraotu.fragment.MasonryPullGridFragment;
+import com.open.yaoraotu.fragment.ThemePullListHeadFootFragment;
 import com.open.yaoraotu.presenter.impl.MasonryPullGridPresenterImpl;
 import com.open.yaoraotu.utils.UrlUtils;
 
@@ -57,7 +57,8 @@ public class MasonryPullGridActivity extends CommonTitleBarActivity{
 	@Override
 	public void addfragment() {
 		// TODO Auto-generated method stub
-		MasonryPullGridFragment fragment =  MasonryPullGridFragment.newInstance(true);
+//		MasonryPullGridFragment fragment =  MasonryPullGridFragment.newInstance(true);
+		ThemePullListHeadFootFragment fragment =  ThemePullListHeadFootFragment.newInstance(true);
 		getSupportFragmentManager().beginTransaction().replace(R.id.layout_content, fragment).commit();
 		
 		// Create the presenter

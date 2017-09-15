@@ -400,10 +400,27 @@ public class YaoRaoTuJsoupService extends CommonService{
 			try {
 				Element globalnavElement = doc.select("ul.navwarp").first();
 				Element moduleElement = globalnavElement.select("li.nLi").get(pageNo);
+				MasonryBean sbean;
+				try {
+					if(moduleElement!=null){
+						sbean = new MasonryBean();
+						Element aElement = moduleElement.select("a").first();
+						if (aElement != null) {
+							String hrefa = aElement.attr("href");
+							Log.i(TAG, "hrefa==" + hrefa);
+							sbean.setHref(hrefa);
+							sbean.setTitle(aElement.attr("title"));
+							list.add(sbean);
+						}
+					}
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
+				
 				Elements moduleElements = moduleElement.select("ul.sub").first().select("li");
 				if (moduleElements != null && moduleElements.size() > 0) {
 					for (int i = 0; i < moduleElements.size(); i++) {
-						MasonryBean sbean = new MasonryBean();
+						 sbean = new MasonryBean();
 							try {
 								try {
 									Element aElement = moduleElements.get(i).select("a").first();

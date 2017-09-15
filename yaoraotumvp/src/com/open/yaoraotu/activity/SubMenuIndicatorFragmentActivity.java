@@ -56,15 +56,16 @@ public class SubMenuIndicatorFragmentActivity extends CommonTitleBarActivity{
 	@Override
 	public void addfragment() {
 		// TODO Auto-generated method stub
-		SubMenuIndicatorFragment fragment = SubMenuIndicatorFragment.newInstance(url, true);
+		SubMenuIndicatorFragment fragment = SubMenuIndicatorFragment.newInstance(url, true,getIntent().getIntExtra("PAGE_NO",0));
 		getSupportFragmentManager().beginTransaction().replace(R.id.layout_content, fragment).commit();
 		
 		new ReflectJsoupPresenterImpl(this, fragment, url,"getSubMenuLi");
 	}
 
-	public static void startSubMenuIndicatorFragmentActivity(Context context, String url) {
+	public static void startSubMenuIndicatorFragmentActivity(Context context, String url,int pageNo) {
 		Intent intent = new Intent();
 		intent.putExtra("URL", url);
+		intent.putExtra("PAGE_NO", pageNo);
 		intent.setClass(context, SubMenuIndicatorFragmentActivity.class);
 		context.startActivity(intent);
 	}

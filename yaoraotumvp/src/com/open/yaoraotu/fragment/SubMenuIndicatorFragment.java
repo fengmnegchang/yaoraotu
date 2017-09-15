@@ -51,11 +51,12 @@ public class SubMenuIndicatorFragment extends BaseV4MVPPFragment<MasonryJson, Su
 	public CommonFragmentPagerAdapter mRankPagerAdapter;
 	public List<MasonryPullGridPresenterImpl> listPresenterImpl = new ArrayList<MasonryPullGridPresenterImpl>();// 
 	
-	public static SubMenuIndicatorFragment newInstance(String url, boolean isVisibleToUser) {
+	public static SubMenuIndicatorFragment newInstance(String url, boolean isVisibleToUser,int pageNo) {
 		SubMenuIndicatorFragment fragment = new SubMenuIndicatorFragment();
 		fragment.setFragment(fragment);
 		fragment.setUserVisibleHint(isVisibleToUser);
 		fragment.url = url;
+		fragment.pageNo = pageNo;
 		return fragment;
 	}
 	
@@ -81,7 +82,7 @@ public class SubMenuIndicatorFragment extends BaseV4MVPPFragment<MasonryJson, Su
 	public void onResume() {
 		super.onResume();
 		mPresenter.start();
-		mPresenter.setPageNo(1);
+		mPresenter.setPageNo(pageNo);
 	}
 	
 	/*
