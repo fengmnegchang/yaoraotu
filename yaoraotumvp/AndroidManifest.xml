@@ -82,6 +82,12 @@
             android:description="@string/app_submenu_indicator_desp"
             android:theme="@style/Theme.PageIndicatorDefaults"  >
         </activity>
+        <!-- dot viewpager  -->
+        <activity
+            android:name="com.open.yaoraotu.activity.CommonDotViewPagerFragmentActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_dot_viewpager_desp" >
+        </activity>
         <!-- 所有类列表 -->
         <activity
             android:name="com.open.android.activity.common.CommonALLActivity"
