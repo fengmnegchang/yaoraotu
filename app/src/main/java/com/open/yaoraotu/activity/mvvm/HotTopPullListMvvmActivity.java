@@ -48,7 +48,7 @@ public class HotTopPullListMvvmActivity extends CommonTitleBarActivity {
         HotTopPullListMvvmFragment fragment =  HotTopPullListMvvmFragment.newInstance(url,true);
         getSupportFragmentManager().beginTransaction().replace(R.id.layout_content, fragment).commit();
 
-        HotTopPullListViewModel mViewModel = new HotTopPullListViewModel(this);
+        HotTopPullListViewModel mViewModel = new HotTopPullListViewModel(this,"getHotList");
         fragment.setViewModel(mViewModel);
     }
 

@@ -32,6 +32,16 @@ public class MVVMCommonViewModel<T> extends BaseObservable  implements CallEarli
     private PullToRefreshBase.Mode mCurrentMode;
     public CommonNavigator mNavigator;
 
+    /**反射类名*/
+    public String className;
+    /**反射方法名*/
+    public String methodName;
+    /**反射参数名*/
+    public Class[] parameterTypes;
+    /**反射参数值*/
+    public Object[] args;
+
+
     public MVVMCommonViewModel(Context mContext){
         this.mContext = mContext;
     }
@@ -172,5 +182,30 @@ public class MVVMCommonViewModel<T> extends BaseObservable  implements CallEarli
 
     public void start(){
 
+    }
+
+
+    public String getClassName() {
+        return className;
+    }
+
+    public void setClassName(String className) {
+        this.className = className;
+    }
+
+    public String getMethodName() {
+        return methodName;
+    }
+
+    public void setMethodName(String methodName) {
+        this.methodName = methodName;
+    }
+
+    public Object[] getArgs() {
+        return args;
+    }
+
+    public void setArgs(Object[] args) {
+        this.args = args;
     }
 }
