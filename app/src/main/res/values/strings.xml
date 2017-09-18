@@ -14,4 +14,5 @@
 	<string name="app_slide_menu_desp">slide menu</string>
 	<string name="app_imagelist_pulllist_desp">image list</string>
 	<string name="app_image_viewpager_desp">image viewpager</string>
+	<string name="app_mvvm_hottop_pulllist_desp">mvvm hot top列表</string>
 </resources>

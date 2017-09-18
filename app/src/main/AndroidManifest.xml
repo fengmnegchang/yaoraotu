@@ -107,6 +107,12 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:description="@string/app_image_viewpager_desp" >
         </activity>
+        <!-- mvvm hot top列表 -->
+        <activity
+            android:name="com.open.yaoraotu.activity.mvvm.HotTopPullListMvvmActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_mvvm_hottop_pulllist_desp" >
+        </activity>
         <!-- 所有类列表 -->
         <activity
             android:name="com.open.android.activity.common.CommonALLActivity"
