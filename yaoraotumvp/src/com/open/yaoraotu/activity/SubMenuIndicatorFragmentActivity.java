@@ -44,7 +44,7 @@ public class SubMenuIndicatorFragmentActivity extends CommonTitleBarActivity{
 		if (getIntent().getStringExtra("URL") != null) {
 			url = getIntent().getStringExtra("URL");
 		} else {
-			url = UrlUtils.YAORAOTU;
+			url = UrlUtils.YAORAOTU_TAOTU;
 		}
 		addfragment();
 	}
@@ -56,7 +56,7 @@ public class SubMenuIndicatorFragmentActivity extends CommonTitleBarActivity{
 	@Override
 	public void addfragment() {
 		// TODO Auto-generated method stub
-		SubMenuIndicatorFragment fragment = SubMenuIndicatorFragment.newInstance(url, true,getIntent().getIntExtra("PAGE_NO",0));
+		SubMenuIndicatorFragment fragment = SubMenuIndicatorFragment.newInstance(url, true,getIntent().getIntExtra("PAGE_NO",1));
 		getSupportFragmentManager().beginTransaction().replace(R.id.layout_content, fragment).commit();
 		
 		new ReflectJsoupPresenterImpl(this, fragment, url,"getSubMenuLi");

@@ -88,6 +88,13 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:description="@string/app_dot_viewpager_desp" >
         </activity>
+        <!--   slide menu-->
+        <activity
+            android:name="com.open.yaoraotu.activity.MainSlideMenuActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_slide_menu_desp"
+            android:theme="@style/Theme.PageIndicatorDefaults"
+            />
         <!-- 所有类列表 -->
         <activity
             android:name="com.open.android.activity.common.CommonALLActivity"

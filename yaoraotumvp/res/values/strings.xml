@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+	<color name="status_bar_color">#333</color>
     <string name="app_name">妖娆图+</string>
 	<string name="app_all_desp">妖娆图+ all</string>
 	<string name="app_webview_desp">app webview</string>
@@ -11,4 +11,5 @@
 	<string name="app_leftmenu_pulllist_desp">left menu</string>
 	<string name="app_submenu_indicator_desp">sub menu indicator</string>
 	<string name="app_dot_viewpager_desp">dot viewpager</string>
+	<string name="app_slide_menu_desp">slide menu</string>
 </resources>
