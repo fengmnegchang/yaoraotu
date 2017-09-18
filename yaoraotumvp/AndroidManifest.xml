@@ -101,6 +101,12 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:description="@string/app_imagelist_pulllist_desp" >
         </activity>
+        <!-- image viewpager  -->
+        <activity
+            android:name="com.open.yaoraotu.activity.ImagePagerAdapterFragmentActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_image_viewpager_desp" >
+        </activity>
         <!-- 所有类列表 -->
         <activity
             android:name="com.open.android.activity.common.CommonALLActivity"

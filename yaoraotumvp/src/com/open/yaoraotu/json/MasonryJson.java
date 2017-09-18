@@ -30,7 +30,9 @@ import com.open.yaoraotu.bean.MasonryBean;
 public class MasonryJson extends CommonJson {
 	private List<MasonryBean> list;
 	private List<MasonryBean> hotlist;
-
+	private int currentPosition;
+	private int maxPage;
+	
 	public List<MasonryBean> getList() {
 		return list;
 	}
@@ -45,6 +47,22 @@ public class MasonryJson extends CommonJson {
 
 	public void setHotlist(List<MasonryBean> hotlist) {
 		this.hotlist = hotlist;
+	}
+
+	public int getCurrentPosition() {
+		return currentPosition;
+	}
+
+	public void setCurrentPosition(int currentPosition) {
+		this.currentPosition = currentPosition;
+	}
+
+	public int getMaxPage() {
+		return maxPage;
+	}
+
+	public void setMaxPage(int maxPage) {
+		this.maxPage = maxPage;
 	}
 	
 

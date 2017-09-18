@@ -13,4 +13,5 @@
 	<string name="app_dot_viewpager_desp">dot viewpager</string>
 	<string name="app_slide_menu_desp">slide menu</string>
 	<string name="app_imagelist_pulllist_desp">image list</string>
+	<string name="app_image_viewpager_desp">image viewpager</string>
 </resources>
