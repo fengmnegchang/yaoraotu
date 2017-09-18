@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/andenginetasklibrary/andenginetasklibrary.iml" filepath="$PROJECT_DIR$/andenginetasklibrary/andenginetasklibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androidcommonlibrary/androidcommonlibrary.iml" filepath="$PROJECT_DIR$/androidcommonlibrary/androidcommonlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androidindicatorlibrary/androidindicatorlibrary.iml" filepath="$PROJECT_DIR$/androidindicatorlibrary/androidindicatorlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androidpulltorefreshlibrary/androidpulltorefreshlibrary.iml" filepath="$PROJECT_DIR$/androidpulltorefreshlibrary/androidpulltorefreshlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androidslidingmenulibrary/androidslidingmenulibrary.iml" filepath="$PROJECT_DIR$/androidslidingmenulibrary/androidslidingmenulibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androidvolleylibrary/androidvolleylibrary.iml" filepath="$PROJECT_DIR$/androidvolleylibrary/androidvolleylibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yaoraotu.iml" filepath="$PROJECT_DIR$/yaoraotu.iml" />
+    </modules>
+  </component>
+</project>

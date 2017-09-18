@@ -1,20 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.open.yaoraotu" >
+    package="com.open.yaoraotu"
+    android:versionCode="1"
+    android:versionName="1.0" >
+	
+	<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.GET_TOP_ACTIVITY_INFO" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="23" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
+        android:name="com.open.yaoraotu.application.CommonApplication"
         android:theme="@style/AppTheme" >
-        <activity android:name=".MainActivity" >
+        <!-- zbjuran 启动 -->
+         <activity
+            android:name="com.open.yaoraotu.activity.SplashActivity"
+            android:theme="@style/AppTheme"
+            android:description="@string/app_name"  >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <!-- webview -->
+        <activity
+            android:name="com.open.yaoraotu.activity.AppWebViewActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_webview_desp" >
+        </activity>
+        <!-- Masonry列表grid -->
+        <activity
+            android:name="com.open.yaoraotu.activity.MasonryPullGridActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_masonry_pullgrid_desp" >
+        </activity>
+        <!-- hot top列表 -->
+        <activity
+            android:name="com.open.yaoraotu.activity.HotTopPullListActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_hottop_pulllist_desp" >
+        </activity>
+        <!-- NewList列表 -->
+        <activity
+            android:name="com.open.yaoraotu.activity.NewListPullListActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_newlist_pulllist_desp" >
+        </activity>
+        <!-- top theme grid -->
+        <activity
+            android:name="com.open.yaoraotu.activity.TopThemePullGridActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_top_theme_pullgrid_desp" >
+        </activity>
+        <!-- menu -->
+        <activity
+            android:name="com.open.yaoraotu.activity.LeftMenuPullListActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_leftmenu_pulllist_desp" >
+        </activity>
+        <!--submenu Indicator 列表 -->
+        <activity
+            android:name="com.open.yaoraotu.activity.SubMenuIndicatorFragmentActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_submenu_indicator_desp"
+            android:theme="@style/Theme.PageIndicatorDefaults"  >
+        </activity>
+        <!-- dot viewpager  -->
+        <activity
+            android:name="com.open.yaoraotu.activity.CommonDotViewPagerFragmentActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_dot_viewpager_desp" >
+        </activity>
+        <!--   slide menu-->
+        <activity
+            android:name="com.open.yaoraotu.activity.MainSlideMenuActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_slide_menu_desp"
+            android:theme="@style/Theme.PageIndicatorDefaults"
+            />
+         <!-- image list -->
+        <activity
+            android:name="com.open.yaoraotu.activity.MasonryImagePullListActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_imagelist_pulllist_desp" >
+        </activity>
+        <!-- image viewpager  -->
+        <activity
+            android:name="com.open.yaoraotu.activity.ImagePagerAdapterFragmentActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_image_viewpager_desp" >
+        </activity>
+        <!-- 所有类列表 -->
+        <activity
+            android:name="com.open.android.activity.common.CommonALLActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_all_desp" >
+              <!-- <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>  -->
         </activity>
     </application>
 

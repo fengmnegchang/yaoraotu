@@ -1,0 +1,10 @@
+/build
+/.gradle
+/.idea
+/andenginetasklibrary
+/androidcommonlibrary
+/androidindicatorlibrary
+/androidpulltorefreshlibrary
+/androidslidingmenulibrary
+/androidvolleylibrary
+
