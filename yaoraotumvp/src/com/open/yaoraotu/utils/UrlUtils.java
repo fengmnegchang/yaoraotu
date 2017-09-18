@@ -29,4 +29,5 @@ public class UrlUtils {
 	public static final String YAORAOTU_TAOTU="https://www.yaoraotu.com/taotu/";
 	public static final String YAORAOTU_TAOTU_TUIGIRL="https://www.yaoraotu.com/taotu/tuigirl/";
 	public static final String YAORAOTU_TAOTU_XIURENWANG="https://www.yaoraotu.com/taotu/xiurenwang/";
+	public static final String YAORAOTU_IMAGE="https://www.yaoraotu.com/taotu/xiurenwang/8834.html";
 }

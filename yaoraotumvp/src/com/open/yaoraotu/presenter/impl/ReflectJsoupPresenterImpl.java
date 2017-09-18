@@ -79,9 +79,10 @@ public class ReflectJsoupPresenterImpl extends CommonAsyncTaskPresenter2<Masonry
 			parameterTypes = new Class[] { String.class,int.class };
 		}
 		
-		if(args==null){
+//		if(args==null){
 			args = new Object[] { href, pageNo};
-		}
+//		}
+		
 		
 		String typename = className+"-"+methodName+"-"+pageNo;
 		if(NetWorkUtils.isNetworkAvailable(mContext)){

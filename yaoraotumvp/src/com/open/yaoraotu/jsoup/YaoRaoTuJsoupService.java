@@ -532,5 +532,139 @@ public class YaoRaoTuJsoupService extends CommonService{
 		}
 		return list;
 	}
+	
+	public static List<MasonryBean> getPushGrid(String href, int pageNo){
+		List<MasonryBean> list = new ArrayList<MasonryBean>();
+		try {
+			Document doc;
+			doc = Jsoup.connect(href)
+					.userAgent(UrlUtils.userAgent)
+//					.header("Host","www.pximg.com")
+//					.cookie("Cookie", "UM_distinctid=15d4f9ce60a4eb-050c6be969bcef-35414878-1aeaa0-15d4f9ce60b3bc; CNZZDATA1260136144=1243021942-1500278440-https%253A%252F%252Fwww.baidu.com%252F%7C1501116123; Hm_lvt_21e82dda40c2143d1c3187f1c80935ec=1500279272,1500968826,1501061381; Hm_lpvt_21e82dda40c2143d1c3187f1c80935ec=1501119552")
+					.timeout(10000).get();
+			Log.i(TAG, "url = " + href);
+			try {
+//				 Element globalnavElement = doc.select("ul.wp-tag-cloud").first();
+				Elements moduleElements = doc.select("div.lazyConPic");
+				if (moduleElements != null && moduleElements.size() > 0) {
+					for (int i = 0; i < moduleElements.size(); i++) {
+						MasonryBean sbean = new MasonryBean();
+							try {
+								try {
+									Element aElement = moduleElements.get(i).select("a").first();
+									if (aElement != null) {
+										String hrefa = aElement.attr("href");
+										Log.i(TAG, "i==" + i + ";hrefa==" + hrefa);
+										sbean.setHref(hrefa);
+									}
+								} catch (Exception e) {
+									e.printStackTrace();
+								}
+								
+								try {
+									Element imgElement = moduleElements.get(i).select("a").first();
+									if (imgElement != null) {
+										String title = imgElement.attr("title");
+										Log.i(TAG, "i==" + i + ";title==" + title);
+										sbean.setTitle(title);
+									}
+								} catch (Exception e) {
+									e.printStackTrace();
+								}
+								
+								try {
+									Element imgElement = moduleElements.get(i).select("img").first();
+									if (imgElement != null) {
+										String src = imgElement.attr("src");
+										Log.i(TAG, "i==" + i + ";src==" + src);
+										sbean.setSrc(src);
+									}
+								} catch (Exception e) {
+									e.printStackTrace();
+								}
+
+							} catch (Exception e) {
+								e.printStackTrace();
+							}
+
+							list.add(sbean);
+					}
+				}
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return list;
+	}
+	
+	public static List<MasonryBean> getImageDetailList(String href, int pageNo){
+		List<MasonryBean> list = new ArrayList<MasonryBean>();
+		try {
+			if(pageNo>1){
+				//https://www.yaoraotu.com/taotu/xiurenwang/8834_2.html
+				//https://www.yaoraotu.com/taotu/xiurenwang/8834.html
+				href = href.replace(".html", "_")+pageNo+".html";
+			}
+			Document doc;
+			doc = Jsoup.connect(href)
+					.userAgent(UrlUtils.userAgent)
+//					.header("Host","www.pximg.com")
+//					.cookie("Cookie", "UM_distinctid=15d4f9ce60a4eb-050c6be969bcef-35414878-1aeaa0-15d4f9ce60b3bc; CNZZDATA1260136144=1243021942-1500278440-https%253A%252F%252Fwww.baidu.com%252F%7C1501116123; Hm_lvt_21e82dda40c2143d1c3187f1c80935ec=1500279272,1500968826,1501061381; Hm_lpvt_21e82dda40c2143d1c3187f1c80935ec=1501119552")
+					.timeout(10000).get();
+			Log.i(TAG, "url = " + href+";pageNo=="+pageNo);
+			try {
+//				 Element globalnavElement = doc.select("ul.wp-tag-cloud").first();
+				Elements moduleElements = doc.select("div.bigpic");
+				if (moduleElements != null && moduleElements.size() > 0) {
+					for (int i = 0; i < moduleElements.size(); i++) {
+						MasonryBean sbean = new MasonryBean();
+							try {
+								sbean.setHref(href);
+								try {
+									Element imgElement = moduleElements.get(i).select("img").first();
+									if (imgElement != null) {
+										String title = imgElement.attr("alt");
+										Log.i(TAG, "i==" + i + ";title==" + title);
+										sbean.setTitle(title);
+									}
+								} catch (Exception e) {
+									e.printStackTrace();
+								}
+								
+								try {
+									Element imgElement = moduleElements.get(i).select("img").first();
+									if (imgElement != null) {
+										String src = imgElement.attr("src");
+										Log.i(TAG, "i==" + i + ";src==" + src);
+										sbean.setSrc(src);
+									}
+								} catch (Exception e) {
+									e.printStackTrace();
+								}
+
+							} catch (Exception e) {
+								e.printStackTrace();
+							}
+
+							list.add(sbean);
+					}
+				}
+
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		return list;
+	}
+
 
 }
