@@ -11,8 +11,6 @@
  */
 package com.open.yaoraotu.adapter;
 
-import java.util.List;
-
 import android.content.Context;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -22,7 +20,10 @@ import android.widget.TextView;
 import com.open.android.adapter.CommonAdapter;
 import com.open.yaoraotu.R;
 import com.open.yaoraotu.activity.AppWebViewActivity;
+import com.open.yaoraotu.activity.MasonryImagePullListActivity;
 import com.open.yaoraotu.bean.MasonryBean;
+
+import java.util.List;
 
 /**
  ***************************************************************************************************************************************************************************** 
@@ -66,6 +67,12 @@ public class NewListAdapter extends CommonAdapter<MasonryBean> {
 				@Override
 				public void onClick(View v) {
 					AppWebViewActivity.startAppWebViewActivity(mContext, bean.getHref());
+				}
+			});
+			convertView.setOnClickListener(new OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					MasonryImagePullListActivity.startMasonryImagePullListActivity(mContext,bean.getHref());
 				}
 			});
 		}

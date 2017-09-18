@@ -11,8 +11,6 @@
  */
 package com.open.yaoraotu.adapter;
 
-import java.util.List;
-
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -29,7 +27,10 @@ import com.open.android.bean.db.OpenDBBean;
 import com.open.android.db.service.OpenDBService;
 import com.open.android.utils.ImageAsyncTask;
 import com.open.yaoraotu.R;
+import com.open.yaoraotu.activity.AppWebViewActivity;
 import com.open.yaoraotu.bean.MasonryBean;
+
+import java.util.List;
 
 /**
  ***************************************************************************************************************************************************************************** 
@@ -59,6 +60,12 @@ public class ImagePagerAdapter extends CommonPagerAdapter<MasonryBean> {
 			if (bean.getSrc() != null && bean.getSrc().length() > 0) {
 				mViewHolder.draweeview.setImageURI(Uri.parse(bean.getSrc()));
 			}
+			convertView.setOnClickListener(new View.OnClickListener() {
+				@Override
+				public void onClick(View v) {
+					AppWebViewActivity.startAppWebViewActivity(mContext, bean.getHref());
+				}
+			});
 			mViewHolder.txt_save.setOnClickListener(new View.OnClickListener() {
 				@Override
 				public void onClick(View v) {
