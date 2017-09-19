@@ -36,6 +36,7 @@ public class NewListPullListViewModel extends CommonReflectJsoupViewModel {
     @BindingAdapter("items")
     public static void setItems(PullToRefreshListView listView, List<MasonryBean> items) {
         Log.d("setItems", "===========");
+        Log.d("setItems", "====222=======");
         ListView listView1 = listView.getRefreshableView();
         HeaderViewListAdapter listAdapter = (HeaderViewListAdapter) listView1.getAdapter();
         if (listAdapter.getWrappedAdapter() instanceof MvvmNewListAdapter) {

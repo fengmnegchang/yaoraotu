@@ -58,7 +58,7 @@ public class MenuItemViewModel extends BaseObservable {
         return mMasonryBeanObservable.get().getHref();
     }
 
-
+    @Bindable
     public Integer getPosition(){
         return positionObservable.get();
     }
