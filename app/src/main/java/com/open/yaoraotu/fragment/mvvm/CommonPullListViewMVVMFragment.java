@@ -1,6 +1,5 @@
 package com.open.yaoraotu.fragment.mvvm;
 
-import android.databinding.ViewDataBinding;
 import android.os.Bundle;
 import android.os.Message;
 import android.support.annotation.Nullable;
@@ -32,10 +31,12 @@ import com.open.yaoraotu.viewmodel.MVVMCommonViewModel;
  * @modifyAuthor:
  * @description: ****************************************************************************************************************************************************************************
  */
-public class CommonPullListViewMVVMFragment<B extends CommonBean,T extends CommonJson,M extends MVVMCommonViewModel<T>,FVDB extends ViewDataBinding,A extends CommonMvvmAdapter>
+//,FVDB extends ViewDataBinding,
+    //M extends MVVMCommonViewModel<T>
+public class CommonPullListViewMVVMFragment<B extends CommonBean,T extends CommonJson,M extends MVVMCommonViewModel<T>,A extends CommonMvvmAdapter>
         extends BaseV4MVPFragment<B,CommonPullListViewMVVMFragment> implements OnRefreshListener<ListView>,OnItemClickListener,CommonNavigator<T> {
     public M mViewModel;
-    public FVDB mFragmentBinding;
+//    public FVDB mFragmentBinding;
     public A mAdapter;
     public PullToRefreshListView mPullToRefreshListView;
 //    public List<MArticleBean> list = new ArrayList<MArticleBean>();

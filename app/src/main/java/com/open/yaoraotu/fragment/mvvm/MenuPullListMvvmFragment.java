@@ -1,6 +1,5 @@
 package com.open.yaoraotu.fragment.mvvm;
 
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -8,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
-import com.open.yaoraotu.R;
 import com.open.yaoraotu.adapter.mvvm.MvvmMenuAdapter;
 import com.open.yaoraotu.bean.MasonryBean;
 import com.open.yaoraotu.databinding.FragmentMvvmLeftmenuPullListviewBinding;
@@ -28,7 +26,9 @@ import java.util.ArrayList;
  * @description: ****************************************************************************************************************************************************************************
  */
 public class MenuPullListMvvmFragment extends CommonPullListViewMVVMFragment<MasonryBean, MasonryJson,NewMenuPullListViewModel,
-        FragmentMvvmLeftmenuPullListviewBinding,MvvmMenuAdapter>{
+        MvvmMenuAdapter>{
+//    public NewMenuPullListViewModel mViewModel;
+    public FragmentMvvmLeftmenuPullListviewBinding mFragmentBinding;
 
     public MenuPullListMvvmFragment(){
         // Requires empty public constructor
@@ -46,8 +46,8 @@ public class MenuPullListMvvmFragment extends CommonPullListViewMVVMFragment<Mas
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        mFragmentBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_mvvm_leftmenu_pull_listview, container, false);
-//        mFragmentBinding = FragmentMvvmLeftmenuPullListviewBinding.inflate(inflater,container, false);
+//        mFragmentBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_mvvm_leftmenu_pull_listview, container, false);
+        mFragmentBinding = FragmentMvvmLeftmenuPullListviewBinding.inflate(inflater,container, false);
         mFragmentBinding.setView(this);
         mFragmentBinding.setViewmodel(mViewModel);
         setHasOptionsMenu(true);

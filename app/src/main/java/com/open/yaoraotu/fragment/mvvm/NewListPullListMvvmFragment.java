@@ -1,6 +1,5 @@
 package com.open.yaoraotu.fragment.mvvm;
 
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -8,7 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
-import com.open.yaoraotu.R;
 import com.open.yaoraotu.adapter.mvvm.MvvmNewListAdapter;
 import com.open.yaoraotu.bean.MasonryBean;
 import com.open.yaoraotu.databinding.FragmentMvvmNewListPullListviewBinding;
@@ -28,8 +26,10 @@ import java.util.ArrayList;
  * @description: ****************************************************************************************************************************************************************************
  */
 public class NewListPullListMvvmFragment extends CommonPullListViewMVVMFragment<MasonryBean, MasonryJson,NewListPullListViewModel,
-        FragmentMvvmNewListPullListviewBinding,MvvmNewListAdapter>{
+        MvvmNewListAdapter>{
 
+//    public NewListPullListViewModel mViewModel;
+    public FragmentMvvmNewListPullListviewBinding mFragmentBinding;
     public NewListPullListMvvmFragment(){
         // Requires empty public constructor
     }
@@ -46,8 +46,8 @@ public class NewListPullListMvvmFragment extends CommonPullListViewMVVMFragment<
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        mFragmentBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_mvvm_new_list_pull_listview, container, false);
-//        mFragmentBinding = FragmentMvvmNewListPullListviewBinding.inflate(inflater,container, false);
+//        mFragmentBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_mvvm_new_list_pull_listview, container, false);
+        mFragmentBinding = FragmentMvvmNewListPullListviewBinding.inflate(inflater,container, false);
         mFragmentBinding.setView(this);
         mFragmentBinding.setViewmodel(mViewModel);
         setHasOptionsMenu(true);

@@ -34,7 +34,7 @@ public class NewHotTopPullListViewModel extends CommonReflectJsoupViewModel {
     //@BindingAdapter("bind:src")
 //    @BindingAdapter({"src"})
     @BindingAdapter("items")
-    public static void setItems2(PullToRefreshListView listView, List<MasonryBean> items) {
+    public static void setItems(PullToRefreshListView listView, List<MasonryBean> items) {
         Log.d("setItems", "===========");
         ListView listView1 = listView.getRefreshableView();
         HeaderViewListAdapter listAdapter = (HeaderViewListAdapter) listView1.getAdapter();
