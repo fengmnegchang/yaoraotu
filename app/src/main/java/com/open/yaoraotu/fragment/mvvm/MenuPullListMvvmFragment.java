@@ -26,9 +26,9 @@ import java.util.ArrayList;
  * @description: ****************************************************************************************************************************************************************************
  */
 public class MenuPullListMvvmFragment extends CommonPullListViewMVVMFragment<MasonryBean, MasonryJson,NewMenuPullListViewModel,
-        MvvmMenuAdapter>{
+        FragmentMvvmLeftmenuPullListviewBinding,MvvmMenuAdapter>{
 //    public NewMenuPullListViewModel mViewModel;
-    public FragmentMvvmLeftmenuPullListviewBinding mFragmentBinding;
+//    public FragmentMvvmLeftmenuPullListviewBinding mFragmentBinding;
 
     public MenuPullListMvvmFragment(){
         // Requires empty public constructor

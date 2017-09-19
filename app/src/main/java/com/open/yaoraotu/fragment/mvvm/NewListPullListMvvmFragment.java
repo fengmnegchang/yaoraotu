@@ -26,10 +26,10 @@ import java.util.ArrayList;
  * @description: ****************************************************************************************************************************************************************************
  */
 public class NewListPullListMvvmFragment extends CommonPullListViewMVVMFragment<MasonryBean, MasonryJson,NewListPullListViewModel,
-        MvvmNewListAdapter>{
+        FragmentMvvmNewListPullListviewBinding, MvvmNewListAdapter>{
 
 //    public NewListPullListViewModel mViewModel;
-    public FragmentMvvmNewListPullListviewBinding mFragmentBinding;
+//    public FragmentMvvmNewListPullListviewBinding mFragmentBinding;
     public NewListPullListMvvmFragment(){
         // Requires empty public constructor
     }
