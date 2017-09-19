@@ -26,7 +26,8 @@ import java.util.ArrayList;
  * @modifyAuthor:
  * @description: ****************************************************************************************************************************************************************************
  */
-public class HotTopPullListMvvmFragment extends CommonPullListViewMVVMFragment<MasonryBean, MasonryJson,HotTopPullListViewModel,FragmentMvvmHotTopPullListviewBinding,MvvmHotTopAdapter>{
+public class HotTopPullListMvvmFragment extends CommonPullListViewMVVMFragment<MasonryBean, MasonryJson,HotTopPullListViewModel,
+        FragmentMvvmHotTopPullListviewBinding,MvvmHotTopAdapter>{
 
     public HotTopPullListMvvmFragment(){
         // Requires empty public constructor

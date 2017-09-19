@@ -113,6 +113,12 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:description="@string/app_mvvm_hottop_pulllist_desp" >
         </activity>
+        <!-- mvvm NewList列表 -->
+        <activity
+            android:name="com.open.yaoraotu.activity.mvvm.NewListPullListMvvmActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_mvvm_newlist_pulllist_desp" >
+        </activity>
         <!-- 所有类列表 -->
         <activity
             android:name="com.open.android.activity.common.CommonALLActivity"

@@ -11,8 +11,6 @@
  */
 package com.open.yaoraotu.adapter;
 
-import java.util.List;
-
 import android.content.Context;
 import android.net.Uri;
 import android.view.View;
@@ -24,7 +22,10 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import com.open.android.adapter.CommonAdapter;
 import com.open.yaoraotu.R;
 import com.open.yaoraotu.activity.AppWebViewActivity;
+import com.open.yaoraotu.activity.MasonryImagePullListActivity;
 import com.open.yaoraotu.bean.MasonryBean;
+
+import java.util.List;
 
 /**
  *****************************************************************************************************************************************************************************
@@ -73,6 +74,12 @@ public class HotTopAdapter extends CommonAdapter<MasonryBean> {
 			if (bean.getSrc()!= null && bean.getSrc().length() > 0) {
 				viewHolder.draweeview.setImageURI(Uri.parse(bean.getSrc()));
 			}
+			convertView.setOnClickListener(new OnClickListener() {
+				@Override
+				public void onClick(View view) {
+					MasonryImagePullListActivity.startMasonryImagePullListActivity(mContext,bean.getHref());
+				}
+			});
 
 		}
 		return convertView;
