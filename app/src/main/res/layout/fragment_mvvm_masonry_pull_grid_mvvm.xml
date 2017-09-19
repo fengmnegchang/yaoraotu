@@ -40,6 +40,6 @@
             android:stretchMode="columnWidth"
             android:verticalSpacing="5dp"
             android:smoothScrollbar="true"
-            app:items="@{viewmodel.items}" />
+            app:masonrygrid="@{viewmodel.items}" />
     </FrameLayout>
 </layout>

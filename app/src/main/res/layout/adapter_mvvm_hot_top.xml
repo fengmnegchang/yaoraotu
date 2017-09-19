@@ -16,8 +16,8 @@
         android:paddingBottom="5dp"
         android:paddingLeft="2dp"
         android:paddingRight="2dp"
-        android:onClick="@{viewmodel.onItemClick}"
         android:paddingTop="5dp">
+        <!--android:onClick="@{viewmodel.onItemClick}"-->
 
         <com.facebook.drawee.view.SimpleDraweeView
             android:id="@+id/draweeview"

@@ -22,12 +22,17 @@ import java.util.List;
  * @description: ****************************************************************************************************************************************************************************
  */
 public class MasonryGridViewModel extends  CommonReflectJsoupViewModel{
+    // These observable fields will update Views automatically
+
+
     public MasonryGridViewModel(Context mContext, String methodName) {
         super(mContext, methodName);
     }
 
+
+
     @SuppressWarnings("unchecked")
-    @BindingAdapter("items")
+    @BindingAdapter("masonrygrid")
     public static void setItems(PullToRefreshHeadGridView gridView, List<MasonryBean> items) {
         Log.d("setItems", "===========");
         HeaderGridView gridView1 = gridView.getRefreshableView();
@@ -51,4 +56,5 @@ public class MasonryGridViewModel extends  CommonReflectJsoupViewModel{
         }
 
     }
+
 }

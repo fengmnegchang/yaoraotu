@@ -12,7 +12,6 @@ import com.open.android.bean.db.OpenDBBean;
 import com.open.android.db.service.OpenDBService;
 import com.open.android.utils.NetWorkUtils;
 import com.open.android.utils.ReflectJsoupUtils;
-import com.open.yaoraotu.BR;
 import com.open.yaoraotu.bean.MasonryBean;
 import com.open.yaoraotu.json.MasonryJson;
 import com.open.yaoraotu.jsoup.YaoRaoTuJsoupService;
@@ -30,7 +29,6 @@ import java.util.List;
  * @description: ****************************************************************************************************************************************************************************
  */
 public class CommonReflectJsoupViewModel extends MVVMCommonViewModel<MasonryJson>{
-    // These observable fields will update Views automatically
     public ObservableList<MasonryBean> items = new ObservableArrayList<MasonryBean>();
 
     public CommonReflectJsoupViewModel(Context mContext,String methodName) {
@@ -50,6 +48,7 @@ public class CommonReflectJsoupViewModel extends MVVMCommonViewModel<MasonryJson
         super.start();
         doAsync(this,this,this);
     }
+
 
     /*
 	 * (non-Javadoc)
@@ -125,7 +124,7 @@ public class CommonReflectJsoupViewModel extends MVVMCommonViewModel<MasonryJson
                 items.addAll(result.getList());
             }
         }
-        notifyPropertyChanged(BR.empty); // It's a @Bindable so update manually
+        notifyPropertyChanged(com.open.yaoraotu.BR.empty); // It's a @Bindable so update manually
 //        mMMVVMArticleListAdapter.notifyDataSetChanged();
         // Call onRefreshComplete when the list has been refreshed.
 //        mPullToRefreshListView.onRefreshComplete();
@@ -150,6 +149,7 @@ public class CommonReflectJsoupViewModel extends MVVMCommonViewModel<MasonryJson
 //            }
 //        }
 //    }
+
 
     @Bindable
     public boolean isEmpty() {

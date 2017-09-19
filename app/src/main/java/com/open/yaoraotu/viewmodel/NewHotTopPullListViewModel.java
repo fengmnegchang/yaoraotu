@@ -24,16 +24,14 @@ import java.util.List;
  */
 public class NewHotTopPullListViewModel extends CommonReflectJsoupViewModel {
     // These observable fields will update Views automatically
-
     public NewHotTopPullListViewModel(Context mContext, String methodName) {
         super(mContext, methodName);
     }
 
-
     @SuppressWarnings("unchecked")
     //@BindingAdapter("bind:src")
 //    @BindingAdapter({"src"})
-    @BindingAdapter("items")
+    @BindingAdapter("newhottop")
     public static void setItems(PullToRefreshListView listView, List<MasonryBean> items) {
         Log.d("setItems", "===========");
         ListView listView1 = listView.getRefreshableView();
@@ -46,5 +44,6 @@ public class NewHotTopPullListViewModel extends CommonReflectJsoupViewModel {
             }
         }
     }
+
 
 }

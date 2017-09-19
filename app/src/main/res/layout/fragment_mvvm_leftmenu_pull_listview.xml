@@ -35,6 +35,6 @@
             android:footerDividersEnabled="false"
             android:headerDividersEnabled="false"
             android:smoothScrollbar="true"
-            app:items="@{viewmodel.items}" />
+            app:menupull="@{viewmodel.items}" />
     </FrameLayout>
 </layout>

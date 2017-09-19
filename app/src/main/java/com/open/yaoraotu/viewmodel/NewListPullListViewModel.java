@@ -24,7 +24,6 @@ import java.util.List;
  */
 public class NewListPullListViewModel extends CommonReflectJsoupViewModel {
     // These observable fields will update Views automatically
-
     public NewListPullListViewModel(Context mContext, String methodName) {
         super(mContext, methodName);
     }
@@ -33,7 +32,7 @@ public class NewListPullListViewModel extends CommonReflectJsoupViewModel {
     @SuppressWarnings("unchecked")
     //@BindingAdapter("bind:src")
 //    @BindingAdapter({"src"})
-    @BindingAdapter("items")
+    @BindingAdapter("newlistpull")
     public static void setItems(PullToRefreshListView listView, List<MasonryBean> items) {
         Log.d("setItems", "===========");
         Log.d("setItems", "====222=======");
@@ -47,5 +46,6 @@ public class NewListPullListViewModel extends CommonReflectJsoupViewModel {
             }
         }
     }
+
 
 }

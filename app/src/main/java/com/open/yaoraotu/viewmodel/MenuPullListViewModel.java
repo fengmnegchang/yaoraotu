@@ -33,7 +33,7 @@ public class MenuPullListViewModel extends CommonReflectJsoupViewModel {
     @SuppressWarnings("unchecked")
     //@BindingAdapter("bind:src")
 //    @BindingAdapter({"src"})
-    @BindingAdapter("items")
+    @BindingAdapter("menupull")
     public static void setItems(PullToRefreshListView listView, List<MasonryBean> items) {
         Log.d("setItems", "===========");
         Log.d("setItems", "=====111111======");

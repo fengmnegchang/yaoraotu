@@ -27,7 +27,7 @@ public class TopThemePullGridViewModel extends  CommonReflectJsoupViewModel{
     }
 
     @SuppressWarnings("unchecked")
-    @BindingAdapter("items")
+    @BindingAdapter("toptheme")
     public static void setItems(PullToRefreshHeadGridView gridView, List<MasonryBean> items) {
         Log.d("setItems", "===========");
         HeaderGridView gridView1 = gridView.getRefreshableView();
@@ -51,4 +51,6 @@ public class TopThemePullGridViewModel extends  CommonReflectJsoupViewModel{
         }
 
     }
+
+
 }
