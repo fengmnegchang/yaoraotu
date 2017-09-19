@@ -5,21 +5,21 @@ import android.content.Intent;
 
 import com.open.android.activity.common.CommonTitleBarActivity;
 import com.open.yaoraotu.R;
-import com.open.yaoraotu.fragment.mvvm.MenuPullListMvvmFragment;
+import com.open.yaoraotu.fragment.mvvm.MasonryPullGridMvvmFragment;
 import com.open.yaoraotu.utils.UrlUtils;
-import com.open.yaoraotu.viewmodel.MenuPullListViewModel;
+import com.open.yaoraotu.viewmodel.MasonryGridViewModel;
 
 /**
  * ****************************************************************************************************************************************************************************
  *
  * @author :fengguangjing
- * @createTime: 17/9/18
+ * @createTime: 17/9/19
  * @version:
  * @modifyTime:
  * @modifyAuthor:
  * @description: ****************************************************************************************************************************************************************************
  */
-public class LeftMenuPullListMvvmActivity extends CommonTitleBarActivity {
+public class MasonryPullGridMvvmActivity  extends CommonTitleBarActivity {
     /*
      * (non-Javadoc)
      *
@@ -45,17 +45,17 @@ public class LeftMenuPullListMvvmActivity extends CommonTitleBarActivity {
     @Override
     public void addfragment() {
         // TODO Auto-generated method stub
-        MenuPullListMvvmFragment fragment =  MenuPullListMvvmFragment.newInstance(url,true);
+        MasonryPullGridMvvmFragment fragment =  MasonryPullGridMvvmFragment.newInstance(url,true);
         getSupportFragmentManager().beginTransaction().replace(R.id.layout_content, fragment).commit();
 
-        MenuPullListViewModel mViewModel = new MenuPullListViewModel(this,"getMenuLi");
+        MasonryGridViewModel mViewModel = new MasonryGridViewModel(this,"getPliList");
         fragment.setViewModel(mViewModel);
     }
 
-    public static void startLeftMenuPullListMvvmActivity(Context context, String url) {
+    public static void startMasonryPullGridMvvmActivity(Context context, String url) {
         Intent intent = new Intent();
         intent.putExtra("URL", url);
-        intent.setClass(context, LeftMenuPullListMvvmActivity.class);
+        intent.setClass(context, MasonryPullGridMvvmActivity.class);
         context.startActivity(intent);
     }
 }

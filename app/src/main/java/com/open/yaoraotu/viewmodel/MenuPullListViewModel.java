@@ -22,10 +22,10 @@ import java.util.List;
  * @modifyAuthor:
  * @description: ****************************************************************************************************************************************************************************
  */
-public class NewMenuPullListViewModel extends CommonReflectJsoupViewModel {
+public class MenuPullListViewModel extends CommonReflectJsoupViewModel {
     // These observable fields will update Views automatically
 
-    public NewMenuPullListViewModel(Context mContext, String methodName) {
+    public MenuPullListViewModel(Context mContext, String methodName) {
         super(mContext, methodName);
     }
 

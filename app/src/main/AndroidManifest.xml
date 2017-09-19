@@ -131,6 +131,12 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:description="@string/app_mvvm_leftmenu_pulllist_desp" >
         </activity>
+        <!-- mvvm Masonry列表grid -->
+        <activity
+            android:name="com.open.yaoraotu.activity.mvvm.MasonryPullGridMvvmActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_mvvm_masonry_pullgrid_desp" >
+        </activity>
         <!-- 所有类列表 -->
         <activity
             android:name="com.open.android.activity.common.CommonALLActivity"

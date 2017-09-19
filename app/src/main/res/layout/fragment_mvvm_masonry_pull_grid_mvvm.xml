@@ -9,11 +9,11 @@
 
         <variable
             name="view"
-            type="com.open.yaoraotu.fragment.mvvm.MenuPullListMvvmFragment" />
+            type="com.open.yaoraotu.fragment.mvvm.MasonryPullGridMvvmFragment" />
 
         <variable
             name="viewmodel"
-            type="com.open.yaoraotu.viewmodel.MenuPullListViewModel" />
+            type="com.open.yaoraotu.viewmodel.MasonryGridViewModel" />
     </data>
 
     <FrameLayout
@@ -22,8 +22,8 @@
         android:background="#ffffff"
         >
 
-        <com.handmark.pulltorefresh.library.PullToRefreshListView
-            android:id="@+id/pullrefreshlist"
+        <com.handmark.pulltorefresh.library.PullToRefreshHeadGridView
+            android:id="@+id/pullrefreshgrid"
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
             android:cacheColorHint="#00000000"
@@ -34,6 +34,11 @@
             android:fastScrollEnabled="false"
             android:footerDividersEnabled="false"
             android:headerDividersEnabled="false"
+            android:horizontalSpacing="5dp"
+            android:numColumns="2"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="5dp"
             android:smoothScrollbar="true"
             app:items="@{viewmodel.items}" />
     </FrameLayout>
