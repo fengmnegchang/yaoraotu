@@ -16,16 +16,16 @@ import java.util.List;
  * ****************************************************************************************************************************************************************************
  *
  * @author :fengguangjing
- * @createTime: 17/9/18
+ * @createTime: 17/9/19
  * @version:
  * @modifyTime:
  * @modifyAuthor:
  * @description: ****************************************************************************************************************************************************************************
  */
-public class MenuPullListViewModel extends CommonReflectJsoupViewModel {
+public class NewMenuPullListViewModel extends CommonReflectJsoupViewModel {
     // These observable fields will update Views automatically
 
-    public MenuPullListViewModel(Context mContext, String methodName) {
+    public NewMenuPullListViewModel(Context mContext, String methodName) {
         super(mContext, methodName);
     }
 
@@ -34,7 +34,7 @@ public class MenuPullListViewModel extends CommonReflectJsoupViewModel {
     //@BindingAdapter("bind:src")
 //    @BindingAdapter({"src"})
     @BindingAdapter("items")
-    public static void setItems2(PullToRefreshListView listView, List<MasonryBean> items) {
+    public static void setItems(PullToRefreshListView listView, List<MasonryBean> items) {
         Log.d("setItems", "===========");
         Log.d("setItems", "=====111111======");
         ListView listView1 = listView.getRefreshableView();

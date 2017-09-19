@@ -13,7 +13,7 @@ import com.open.yaoraotu.adapter.mvvm.MvvmMenuAdapter;
 import com.open.yaoraotu.bean.MasonryBean;
 import com.open.yaoraotu.databinding.FragmentMvvmLeftmenuPullListviewBinding;
 import com.open.yaoraotu.json.MasonryJson;
-import com.open.yaoraotu.viewmodel.MenuPullListViewModel;
+import com.open.yaoraotu.viewmodel.NewMenuPullListViewModel;
 
 import java.util.ArrayList;
 
@@ -27,7 +27,7 @@ import java.util.ArrayList;
  * @modifyAuthor:
  * @description: ****************************************************************************************************************************************************************************
  */
-public class MenuPullListMvvmFragment extends CommonPullListViewMVVMFragment<MasonryBean, MasonryJson,MenuPullListViewModel,
+public class MenuPullListMvvmFragment extends CommonPullListViewMVVMFragment<MasonryBean, MasonryJson,NewMenuPullListViewModel,
         FragmentMvvmLeftmenuPullListviewBinding,MvvmMenuAdapter>{
 
     public MenuPullListMvvmFragment(){

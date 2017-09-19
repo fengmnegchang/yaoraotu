@@ -13,7 +13,7 @@
 
         <variable
             name="viewmodel"
-            type="com.open.yaoraotu.viewmodel.HotTopPullListViewModel" />
+            type="com.open.yaoraotu.viewmodel.NewHotTopPullListViewModel" />
     </data>
 
     <FrameLayout

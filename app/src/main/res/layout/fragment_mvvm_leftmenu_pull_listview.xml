@@ -13,7 +13,7 @@
 
         <variable
             name="viewmodel"
-            type="com.open.yaoraotu.viewmodel.MenuPullListViewModel" />
+            type="com.open.yaoraotu.viewmodel.NewMenuPullListViewModel" />
     </data>
 
     <FrameLayout

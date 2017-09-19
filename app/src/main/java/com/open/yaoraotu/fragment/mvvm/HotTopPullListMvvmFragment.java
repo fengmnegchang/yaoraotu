@@ -1,5 +1,6 @@
 package com.open.yaoraotu.fragment.mvvm;
 
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -8,11 +9,12 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
+import com.open.yaoraotu.R;
 import com.open.yaoraotu.adapter.mvvm.MvvmHotTopAdapter;
 import com.open.yaoraotu.bean.MasonryBean;
 import com.open.yaoraotu.databinding.FragmentMvvmHotTopPullListviewBinding;
 import com.open.yaoraotu.json.MasonryJson;
-import com.open.yaoraotu.viewmodel.HotTopPullListViewModel;
+import com.open.yaoraotu.viewmodel.NewHotTopPullListViewModel;
 
 import java.util.ArrayList;
 
@@ -26,7 +28,7 @@ import java.util.ArrayList;
  * @modifyAuthor:
  * @description: ****************************************************************************************************************************************************************************
  */
-public class HotTopPullListMvvmFragment extends CommonPullListViewMVVMFragment<MasonryBean, MasonryJson,HotTopPullListViewModel,
+public class HotTopPullListMvvmFragment extends CommonPullListViewMVVMFragment<MasonryBean, MasonryJson,NewHotTopPullListViewModel,
         FragmentMvvmHotTopPullListviewBinding,MvvmHotTopAdapter>{
 
     public HotTopPullListMvvmFragment(){
@@ -46,8 +48,8 @@ public class HotTopPullListMvvmFragment extends CommonPullListViewMVVMFragment<M
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-//        mFragmentBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_mvvm_hot_top_pull_listview, container, false);
-        mFragmentBinding = FragmentMvvmHotTopPullListviewBinding.inflate(inflater,container, false);
+        mFragmentBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_mvvm_hot_top_pull_listview, container, false);
+//        mFragmentBinding = FragmentMvvmHotTopPullListviewBinding.inflate(inflater,container, false);
         mFragmentBinding.setView(this);
         mFragmentBinding.setViewmodel(mViewModel);
         setHasOptionsMenu(true);

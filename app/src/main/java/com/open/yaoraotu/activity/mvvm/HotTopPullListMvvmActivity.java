@@ -7,7 +7,7 @@ import com.open.android.activity.common.CommonTitleBarActivity;
 import com.open.yaoraotu.R;
 import com.open.yaoraotu.fragment.mvvm.HotTopPullListMvvmFragment;
 import com.open.yaoraotu.utils.UrlUtils;
-import com.open.yaoraotu.viewmodel.HotTopPullListViewModel;
+import com.open.yaoraotu.viewmodel.NewHotTopPullListViewModel;
 
 /**
  * ****************************************************************************************************************************************************************************
@@ -48,7 +48,7 @@ public class HotTopPullListMvvmActivity extends CommonTitleBarActivity {
         HotTopPullListMvvmFragment fragment =  HotTopPullListMvvmFragment.newInstance(url,true);
         getSupportFragmentManager().beginTransaction().replace(R.id.layout_content, fragment).commit();
 
-        HotTopPullListViewModel mViewModel = new HotTopPullListViewModel(this,"getHotList");
+        NewHotTopPullListViewModel mViewModel = new NewHotTopPullListViewModel(this,"getHotList");
         fragment.setViewModel(mViewModel);
     }
 

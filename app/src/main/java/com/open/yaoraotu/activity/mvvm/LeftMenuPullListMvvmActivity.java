@@ -7,7 +7,7 @@ import com.open.android.activity.common.CommonTitleBarActivity;
 import com.open.yaoraotu.R;
 import com.open.yaoraotu.fragment.mvvm.MenuPullListMvvmFragment;
 import com.open.yaoraotu.utils.UrlUtils;
-import com.open.yaoraotu.viewmodel.MenuPullListViewModel;
+import com.open.yaoraotu.viewmodel.NewMenuPullListViewModel;
 
 /**
  * ****************************************************************************************************************************************************************************
@@ -48,7 +48,7 @@ public class LeftMenuPullListMvvmActivity extends CommonTitleBarActivity {
         MenuPullListMvvmFragment fragment =  MenuPullListMvvmFragment.newInstance(url,true);
         getSupportFragmentManager().beginTransaction().replace(R.id.layout_content, fragment).commit();
 
-        MenuPullListViewModel mViewModel = new MenuPullListViewModel(this,"getMenuLi");
+        NewMenuPullListViewModel mViewModel = new NewMenuPullListViewModel(this,"getMenuLi");
         fragment.setViewModel(mViewModel);
     }
 

@@ -16,16 +16,16 @@ import java.util.List;
  * ****************************************************************************************************************************************************************************
  *
  * @author :fengguangjing
- * @createTime: 17/9/18
+ * @createTime: 17/9/19
  * @version:
  * @modifyTime:
  * @modifyAuthor:
  * @description: ****************************************************************************************************************************************************************************
  */
-public class HotTopPullListViewModel extends CommonReflectJsoupViewModel {
+public class NewHotTopPullListViewModel extends CommonReflectJsoupViewModel {
     // These observable fields will update Views automatically
 
-    public HotTopPullListViewModel(Context mContext, String methodName) {
+    public NewHotTopPullListViewModel(Context mContext, String methodName) {
         super(mContext, methodName);
     }
 
@@ -34,7 +34,7 @@ public class HotTopPullListViewModel extends CommonReflectJsoupViewModel {
     //@BindingAdapter("bind:src")
 //    @BindingAdapter({"src"})
     @BindingAdapter("items")
-    public static void setItems(PullToRefreshListView listView, List<MasonryBean> items) {
+    public static void setItems2(PullToRefreshListView listView, List<MasonryBean> items) {
         Log.d("setItems", "===========");
         ListView listView1 = listView.getRefreshableView();
         HeaderViewListAdapter listAdapter = (HeaderViewListAdapter) listView1.getAdapter();

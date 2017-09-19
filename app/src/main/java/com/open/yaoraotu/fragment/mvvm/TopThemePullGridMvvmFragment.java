@@ -1,5 +1,6 @@
 package com.open.yaoraotu.fragment.mvvm;
 
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
+import com.open.yaoraotu.R;
 import com.open.yaoraotu.adapter.mvvm.MvvmNewListAdapter;
 import com.open.yaoraotu.bean.MasonryBean;
 import com.open.yaoraotu.databinding.FragmentMvvmTopThemePullGridMvvmBinding;
@@ -44,8 +46,8 @@ public class TopThemePullGridMvvmFragment extends  CommonPullGridMVVMFragment<Ma
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-//        mFragmentBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_mvvm_hot_top_pull_listview, container, false);
-        mFragmentBinding = FragmentMvvmTopThemePullGridMvvmBinding.inflate(inflater,container, false);
+        mFragmentBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_mvvm_top_theme_pull_grid_mvvm, container, false);
+//        mFragmentBinding = FragmentMvvmTopThemePullGridMvvmBinding.inflate(inflater,container, false);
         mFragmentBinding.setView(this);
         mFragmentBinding.setViewmodel(mViewModel);
         setHasOptionsMenu(true);
