@@ -1,5 +1,6 @@
 package com.open.yaoraotu.fragment.mvvm;
 
+import android.databinding.ViewDataBinding;
 import android.os.Bundle;
 import android.os.Message;
 import android.support.annotation.Nullable;
@@ -15,6 +16,7 @@ import com.handmark.pulltorefresh.library.PullToRefreshHeadGridView;
 import com.open.android.bean.CommonBean;
 import com.open.android.fragment.BaseV4MVPFragment;
 import com.open.android.json.CommonJson;
+import com.open.yaoraotu.adapter.mvvm.CommonMvvmAdapter;
 import com.open.yaoraotu.viewmodel.CommonNavigator;
 import com.open.yaoraotu.viewmodel.MVVMCommonViewModel;
 
@@ -28,8 +30,11 @@ import com.open.yaoraotu.viewmodel.MVVMCommonViewModel;
  * @modifyAuthor:
  * @description: ****************************************************************************************************************************************************************************
  */
-public class CommonPullGridMVVMFragment<B extends CommonBean,T extends CommonJson,M extends MVVMCommonViewModel<T>> extends BaseV4MVPFragment<B,CommonPullGridMVVMFragment> implements OnRefreshListener<HeaderGridView>,OnItemClickListener,CommonNavigator<T> {
+public class CommonPullGridMVVMFragment<B extends CommonBean,T extends CommonJson,M extends MVVMCommonViewModel<T>,FVDB extends ViewDataBinding,A extends CommonMvvmAdapter>
+        extends BaseV4MVPFragment<B,CommonPullGridMVVMFragment> implements OnRefreshListener<HeaderGridView>,OnItemClickListener,CommonNavigator<T> {
     public M mViewModel;
+    public FVDB mFragmentBinding;
+    public A mAdapter;
 //    private FragmentCommonMvvmPullGridviewBinding mMVVMArticleBinding;
 //    private MMVVMArticleGridAdapter mMMVVMArticleGridAdapter;
     public PullToRefreshHeadGridView mPullToRefreshHeadGridView;

@@ -16,4 +16,5 @@
 	<string name="app_image_viewpager_desp">image viewpager</string>
 	<string name="app_mvvm_hottop_pulllist_desp">mvvm hot top列表</string>
 	<string name="app_mvvm_newlist_pulllist_desp">mvvm new list列表</string>
+	<string name="app_mvvm_top_theme_pullgrid_desp">mvvm top theme列表grid</string>
 </resources>

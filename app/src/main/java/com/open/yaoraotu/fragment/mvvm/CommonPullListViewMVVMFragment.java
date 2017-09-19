@@ -32,7 +32,8 @@ import com.open.yaoraotu.viewmodel.MVVMCommonViewModel;
  * @modifyAuthor:
  * @description: ****************************************************************************************************************************************************************************
  */
-public class CommonPullListViewMVVMFragment<B extends CommonBean,T extends CommonJson,M extends MVVMCommonViewModel<T>,FVDB extends ViewDataBinding,A extends CommonMvvmAdapter> extends BaseV4MVPFragment<B,CommonPullListViewMVVMFragment> implements OnRefreshListener<ListView>,OnItemClickListener,CommonNavigator<T> {
+public class CommonPullListViewMVVMFragment<B extends CommonBean,T extends CommonJson,M extends MVVMCommonViewModel<T>,FVDB extends ViewDataBinding,A extends CommonMvvmAdapter>
+        extends BaseV4MVPFragment<B,CommonPullListViewMVVMFragment> implements OnRefreshListener<ListView>,OnItemClickListener,CommonNavigator<T> {
     public M mViewModel;
     public FVDB mFragmentBinding;
     public A mAdapter;
