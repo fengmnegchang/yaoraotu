@@ -34,6 +34,11 @@ dependencies {
     })
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:multidex:1.0.1'
+    compile 'com.alibaba:fastjson:1.1.45.android@jar'
+    compile('com.taobao.android:atlas_core:5.0.7.30@aar') {
+        transitive = true
+    }
+    compile 'com.taobao.android:atlasupdate:1.1.4.10@aar'
     compile 'com.android.support:appcompat-v7:25.0.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
     testCompile 'junit:junit:4.12'

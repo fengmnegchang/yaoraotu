@@ -21,7 +21,7 @@ import java.util.List;
  * @modifyAuthor:
  * @description: ****************************************************************************************************************************************************************************
  */
-public class TopThemePullGridViewModel extends  CommonReflectJsoupViewModel{
+public class TopThemePullGridViewModel extends  CommonMvvmReflectJsoupViewModel{
     public TopThemePullGridViewModel(Context mContext, String methodName) {
         super(mContext, methodName);
     }

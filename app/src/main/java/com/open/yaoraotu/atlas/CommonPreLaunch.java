@@ -1,6 +1,8 @@
-package com.open.yaoraotu.viewmodel;
+package com.open.yaoraotu.atlas;
 
 import android.content.Context;
+import android.taobao.atlas.runtime.AtlasPreLauncher;
+import android.util.Log;
 
 /**
  * ****************************************************************************************************************************************************************************
@@ -12,11 +14,9 @@ import android.content.Context;
  * @modifyAuthor:
  * @description: ****************************************************************************************************************************************************************************
  */
-public class SubMenuIndicatorViewModel extends CommonMvvmReflectJsoupViewModel{
-
-    public SubMenuIndicatorViewModel(Context mContext, String methodName) {
-        super(mContext, methodName);
+public class CommonPreLaunch implements AtlasPreLauncher {
+    @Override
+    public void initBeforeAtlas(Context context) {
+        Log.d("tag", "=========prelaunch invokded");
     }
-
-
 }

@@ -5,16 +5,16 @@
     <application android:allowBackup="true" android:label="@string/app_name"
         android:supportsRtl="true">
         <!-- zbjuran 启动 -->
-        <!--<activity-->
-            <!--android:name="com.open.yaoraotu.splash.activity.SplashActivity"-->
-            <!--android:theme="@style/AppTheme"-->
-            <!--android:description="@string/app_name"  >-->
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
+        <activity
+            android:name="com.open.yaoraotu.splash.activity.SplashActivity"
+            android:theme="@style/AppTheme"
+            android:description="@string/app_name"  >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        <!--</activity>-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

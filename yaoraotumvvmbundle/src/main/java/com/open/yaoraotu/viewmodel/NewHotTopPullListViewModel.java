@@ -22,7 +22,7 @@ import java.util.List;
  * @modifyAuthor:
  * @description: ****************************************************************************************************************************************************************************
  */
-public class NewHotTopPullListViewModel extends CommonReflectJsoupViewModel {
+public class NewHotTopPullListViewModel extends CommonMvvmReflectJsoupViewModel {
     // These observable fields will update Views automatically
     public NewHotTopPullListViewModel(Context mContext, String methodName) {
         super(mContext, methodName);

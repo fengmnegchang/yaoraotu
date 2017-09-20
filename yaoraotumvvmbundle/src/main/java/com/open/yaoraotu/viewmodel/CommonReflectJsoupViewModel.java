@@ -124,7 +124,7 @@ public class CommonReflectJsoupViewModel extends MVVMCommonViewModel<MasonryJson
                 items.addAll(result.getList());
             }
         }
-        notifyPropertyChanged(com.open.yaoraotu.common.BR.empty); // It's a @Bindable so update manually
+//        notifyPropertyChanged(com.open.yaoraotu.common.BR.empty); // It's a @Bindable so update manually
 //        mMMVVMArticleListAdapter.notifyDataSetChanged();
         // Call onRefreshComplete when the list has been refreshed.
 //        mPullToRefreshListView.onRefreshComplete();

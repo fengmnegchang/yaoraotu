@@ -2,6 +2,8 @@ package com.open.yaoraotu.viewmodel;
 
 import android.content.Context;
 
+import com.open.yaoraotu.json.MasonryJson;
+
 /**
  * ****************************************************************************************************************************************************************************
  *
@@ -12,11 +14,15 @@ import android.content.Context;
  * @modifyAuthor:
  * @description: ****************************************************************************************************************************************************************************
  */
-public class SubMenuIndicatorViewModel extends CommonMvvmReflectJsoupViewModel{
+public class CommonMvvmReflectJsoupViewModel extends CommonReflectJsoupViewModel{
 
-    public SubMenuIndicatorViewModel(Context mContext, String methodName) {
+    public CommonMvvmReflectJsoupViewModel(Context mContext, String methodName) {
         super(mContext, methodName);
     }
 
-
+    @Override
+    public void onCallback(MasonryJson result) {
+        super.onCallback(result);
+        notifyPropertyChanged(com.open.yaoraotu.mvvm.BR.empty); // It's a @Bindable so update manually
+    }
 }

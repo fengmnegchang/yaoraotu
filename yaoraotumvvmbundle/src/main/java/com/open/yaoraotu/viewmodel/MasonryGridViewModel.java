@@ -21,7 +21,7 @@ import java.util.List;
  * @modifyAuthor:
  * @description: ****************************************************************************************************************************************************************************
  */
-public class MasonryGridViewModel extends  CommonReflectJsoupViewModel{
+public class MasonryGridViewModel extends  CommonMvvmReflectJsoupViewModel{
     // These observable fields will update Views automatically
 
 

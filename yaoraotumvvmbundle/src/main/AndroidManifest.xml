@@ -4,7 +4,55 @@
 
     <application android:allowBackup="true" android:label="@string/app_name"
         android:supportsRtl="true">
-
+        <!-- mvvm hot top列表 -->
+        <activity
+            android:name="com.open.yaoraotu.activity.mvvm.HotTopPullListMvvmActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_mvvm_hottop_pulllist_desp" >
+        </activity>
+        <!-- mvvm NewList列表 -->
+        <activity
+            android:name="com.open.yaoraotu.activity.mvvm.NewListPullListMvvmActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_mvvm_newlist_pulllist_desp" >
+        </activity>
+        <!-- mvvm top theme grid -->
+        <activity
+            android:name="com.open.yaoraotu.activity.mvvm.TopThemePullGridMvvmActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_mvvm_top_theme_pullgrid_desp" >
+        </activity>
+        <!-- mvvm menu -->
+        <activity
+            android:name="com.open.yaoraotu.activity.mvvm.LeftMenuPullListMvvmActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_mvvm_leftmenu_pulllist_desp" >
+        </activity>
+        <!-- mvvm Masonry列表grid -->
+        <activity
+            android:name="com.open.yaoraotu.activity.mvvm.MasonryPullGridMvvmActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_mvvm_masonry_pullgrid_desp" >
+        </activity>
+        <!-- mvvm image list -->
+        <activity
+            android:name="com.open.yaoraotu.activity.mvvm.MasonryImagePullListMvvmActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_mvvm_imagelist_pulllist_desp" >
+        </activity>
+        <!--mvvm submenu Indicator 列表 -->
+        <activity
+            android:name="com.open.yaoraotu.activity.mvvm.SubMenuIndicatorMvvmActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_mvvm_submenu_indicator_desp"
+            android:theme="@style/Theme.PageIndicatorDefaults"  >
+        </activity>
+        <!-- mvvm image viewpager  -->
+        <activity
+            android:name="com.open.yaoraotu.activity.mvvm.ImagePagerAdapterFragmentMvvmActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_mvvm_image_viewpager_desp" >
+        </activity>
     </application>
 
 </manifest>
