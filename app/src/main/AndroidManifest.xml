@@ -143,6 +143,13 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:description="@string/app_mvvm_imagelist_pulllist_desp" >
         </activity>
+        <!--mvvm submenu Indicator 列表 -->
+        <activity
+            android:name="com.open.yaoraotu.activity.mvvm.SubMenuIndicatorMvvmActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_mvvm_submenu_indicator_desp"
+            android:theme="@style/Theme.PageIndicatorDefaults"  >
+        </activity>
         <!-- 所有类列表 -->
         <activity
             android:name="com.open.android.activity.common.CommonALLActivity"
