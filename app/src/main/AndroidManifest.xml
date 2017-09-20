@@ -150,6 +150,12 @@
             android:description="@string/app_mvvm_submenu_indicator_desp"
             android:theme="@style/Theme.PageIndicatorDefaults"  >
         </activity>
+        <!-- mvvm image viewpager  -->
+        <activity
+            android:name="com.open.yaoraotu.activity.mvvm.ImagePagerAdapterFragmentMvvmActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_mvvm_image_viewpager_desp" >
+        </activity>
         <!-- 所有类列表 -->
         <activity
             android:name="com.open.android.activity.common.CommonALLActivity"
