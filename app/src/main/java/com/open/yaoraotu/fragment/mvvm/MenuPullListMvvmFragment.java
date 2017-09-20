@@ -5,8 +5,12 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.HeaderViewListAdapter;
+import android.widget.ListView;
 
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
+import com.open.yaoraotu.activity.SubMenuIndicatorFragmentActivity;
 import com.open.yaoraotu.adapter.mvvm.MvvmMenuAdapter;
 import com.open.yaoraotu.bean.MasonryBean;
 import com.open.yaoraotu.databinding.FragmentMvvmLeftmenuPullListviewBinding;
@@ -80,5 +84,19 @@ public class MenuPullListMvvmFragment extends CommonPullListViewMVVMFragment<Mas
     @Override
     public void onCallback(MasonryJson result) {
         mPullToRefreshListView.onRefreshComplete();
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        ListView listView1 = mPullToRefreshListView.getRefreshableView();
+        HeaderViewListAdapter listAdapter = (HeaderViewListAdapter) listView1.getAdapter();
+        if (listAdapter.getWrappedAdapter() instanceof MvvmMenuAdapter) {
+            MvvmMenuAdapter adapter = (MvvmMenuAdapter) listAdapter.getWrappedAdapter();
+            if (adapter != null) {
+                MasonryBean bean = (MasonryBean) adapter.getItem((int)id);
+                SubMenuIndicatorFragmentActivity.startSubMenuIndicatorFragmentActivity(view.getContext(), bean.getHref(), (int)id);
+
+            }
+        }
     }
 }

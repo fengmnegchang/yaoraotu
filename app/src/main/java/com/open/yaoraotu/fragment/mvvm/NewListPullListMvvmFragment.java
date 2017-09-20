@@ -5,8 +5,12 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.HeaderViewListAdapter;
+import android.widget.ListView;
 
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
+import com.open.yaoraotu.activity.MasonryImagePullListActivity;
 import com.open.yaoraotu.adapter.mvvm.MvvmNewListAdapter;
 import com.open.yaoraotu.bean.MasonryBean;
 import com.open.yaoraotu.databinding.FragmentMvvmNewListPullListviewBinding;
@@ -80,5 +84,18 @@ public class NewListPullListMvvmFragment extends CommonPullListViewMVVMFragment<
     @Override
     public void onCallback(MasonryJson result) {
         mPullToRefreshListView.onRefreshComplete();
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        ListView listView1 = mPullToRefreshListView.getRefreshableView();
+        HeaderViewListAdapter listAdapter = (HeaderViewListAdapter) listView1.getAdapter();
+        if (listAdapter.getWrappedAdapter() instanceof MvvmNewListAdapter) {
+            MvvmNewListAdapter adapter = (MvvmNewListAdapter) listAdapter.getWrappedAdapter();
+            if (adapter != null) {
+                MasonryBean bean = (MasonryBean) adapter.getItem((int)id);
+                MasonryImagePullListActivity.startMasonryImagePullListActivity(view.getContext(),bean.getHref());
+            }
+        }
     }
 }

@@ -1,5 +1,8 @@
 package com.open.yaoraotu.viewmodel;
 
+import android.view.View;
+import android.widget.AdapterView;
+
 /**
  * ****************************************************************************************************************************************************************************
  *
@@ -16,4 +19,13 @@ public interface CommonNavigator<T> {
      * @param result
      */
     void onCallback(T result);
+
+//    /**
+//     * 点击事件
+//     * @param parent
+//     * @param view
+//     * @param position
+//     * @param id
+//     */
+//    void onItemClick(AdapterView<?> parent, View view, int position, long id);
 }

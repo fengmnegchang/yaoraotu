@@ -5,9 +5,13 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 
+import com.handmark.pulltorefresh.library.HeaderGridView;
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
+import com.open.yaoraotu.activity.MasonryImagePullListActivity;
 import com.open.yaoraotu.adapter.mvvm.MvvmMasonryGridAdapter;
+import com.open.yaoraotu.adapter.mvvm.MvvmNewListAdapter;
 import com.open.yaoraotu.bean.MasonryBean;
 import com.open.yaoraotu.databinding.FragmentMvvmMasonryPullGridMvvmBinding;
 import com.open.yaoraotu.json.MasonryJson;
@@ -78,5 +82,28 @@ public class MasonryPullGridMvvmFragment extends  CommonPullGridMVVMFragment<Mas
     @Override
     public void onCallback(MasonryJson result) {
         mPullToRefreshHeadGridView.onRefreshComplete();
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        HeaderGridView gridView1 = mPullToRefreshHeadGridView.getRefreshableView();
+        if(gridView1.getHeaderViewCount()>0){
+            HeaderGridView.HeaderViewGridAdapter listAdapter = (HeaderGridView.HeaderViewGridAdapter) gridView1.getAdapter();
+            if (listAdapter.getWrappedAdapter() instanceof MvvmMasonryGridAdapter) {
+                MvvmMasonryGridAdapter adapter = (MvvmMasonryGridAdapter) listAdapter.getWrappedAdapter();
+                if (adapter != null) {
+                    MasonryBean bean = (MasonryBean) adapter.getItem((int)id);
+                    MasonryImagePullListActivity.startMasonryImagePullListActivity(view.getContext(),bean.getHref());
+                }
+            }
+        }else{
+            if (gridView1.getAdapter() instanceof MvvmMasonryGridAdapter) {
+                MvvmMasonryGridAdapter adapter = (MvvmMasonryGridAdapter) gridView1.getAdapter();
+                if (adapter != null) {
+                    MasonryBean bean = (MasonryBean) adapter.getItem((int)id);
+                    MasonryImagePullListActivity.startMasonryImagePullListActivity(view.getContext(),bean.getHref());
+                }
+            }
+        }
     }
 }
