@@ -1,11 +1,13 @@
 package com.open.yaoraotu.adapter.mvvm;
 
 import android.content.Context;
+import android.databinding.DataBindingUtil;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.open.yaoraotu.bean.MasonryBean;
+import com.open.yaoraotu.mvvm.R;
 import com.open.yaoraotu.mvvm.databinding.AdapterMvvmImageViewpagerBinding;
 import com.open.yaoraotu.viewmodel.itemview.ImagePagerItemViewModel;
 
@@ -36,7 +38,8 @@ public class MvvmImagePagerAdapter extends  CommonMvvmPagerAdapter<MasonryBean,A
         LayoutInflater inflater = LayoutInflater.from(mContext);
 
         // Create the binding
-        mBinding = AdapterMvvmImageViewpagerBinding.inflate(inflater, container, false);
+        mBinding = DataBindingUtil.inflate(inflater, R.layout.adapter_mvvm_image_viewpager, container, false);
+//        mBinding = AdapterMvvmImageViewpagerBinding.inflate(inflater, container, false);
 //        } else {
 //            // Recycling view
 //            binding = DataBindingUtil.getBinding(convertView);

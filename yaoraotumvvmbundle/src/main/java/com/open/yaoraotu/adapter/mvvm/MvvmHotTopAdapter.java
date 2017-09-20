@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.open.yaoraotu.bean.MasonryBean;
+import com.open.yaoraotu.mvvm.R;
 import com.open.yaoraotu.mvvm.databinding.AdapterMvvmHotTopBinding;
 import com.open.yaoraotu.viewmodel.itemview.MvvmHotTopItemViewModel;
 
@@ -36,8 +37,8 @@ public class MvvmHotTopAdapter extends CommonMvvmAdapter<MasonryBean,AdapterMvvm
             LayoutInflater inflater = LayoutInflater.from(parent.getContext());
 
             // Create the binding
-//            mBinding = DataBindingUtil.inflate(inflater, R.layout.adapter_mvvm_hot_top, parent, false);
-            mBinding = AdapterMvvmHotTopBinding.inflate(inflater, parent, false);
+            mBinding = DataBindingUtil.inflate(inflater, R.layout.adapter_mvvm_hot_top, parent, false);
+//            mBinding = AdapterMvvmHotTopBinding.inflate(inflater, parent, false);
         }else{
             // Recycling view
             mBinding = DataBindingUtil.getBinding(convertView);

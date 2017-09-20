@@ -1,5 +1,6 @@
 package com.open.yaoraotu.fragment.mvvm;
 
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -13,6 +14,7 @@ import com.open.yaoraotu.activity.mvvm.MasonryImagePullListMvvmActivity;
 import com.open.yaoraotu.adapter.mvvm.MvvmMasonryGridAdapter;
 import com.open.yaoraotu.bean.MasonryBean;
 import com.open.yaoraotu.json.MasonryJson;
+import com.open.yaoraotu.mvvm.R;
 import com.open.yaoraotu.mvvm.databinding.FragmentMvvmMasonryPullGridMvvmBinding;
 import com.open.yaoraotu.viewmodel.MasonryGridViewModel;
 
@@ -50,8 +52,8 @@ public class MasonryPullGridMvvmFragment extends  CommonPullGridMVVMFragment<Mas
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-//        mFragmentBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_mvvm_top_theme_pull_grid_mvvm, container, false);
-        mFragmentBinding = FragmentMvvmMasonryPullGridMvvmBinding.inflate(inflater,container, false);
+        mFragmentBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_mvvm_masonry_pull_grid_mvvm, container, false);
+//        mFragmentBinding = FragmentMvvmMasonryPullGridMvvmBinding.inflate(inflater,container, false);
         mFragmentBinding.setView(this);
         mFragmentBinding.setViewmodel(mViewModel);
         setHasOptionsMenu(true);

@@ -1,5 +1,6 @@
 package com.open.yaoraotu.fragment.mvvm;
 
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -14,6 +15,7 @@ import com.open.yaoraotu.activity.mvvm.ImagePagerAdapterFragmentMvvmActivity;
 import com.open.yaoraotu.adapter.mvvm.MvvmImageAdapter;
 import com.open.yaoraotu.bean.MasonryBean;
 import com.open.yaoraotu.json.MasonryJson;
+import com.open.yaoraotu.mvvm.R;
 import com.open.yaoraotu.mvvm.databinding.FragmentMvvmImageHeadfootPullListviewBinding;
 import com.open.yaoraotu.viewmodel.ImageHeadFootPullListViewModel;
 
@@ -52,8 +54,8 @@ public class ImageHeadFootPullListMvvmFragment extends CommonPullListViewMVVMFra
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-//        mFragmentBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_mvvm_hot_top_pull_listview, container, false);
-        mFragmentBinding = FragmentMvvmImageHeadfootPullListviewBinding.inflate(inflater,container, false);
+        mFragmentBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_mvvm_image_headfoot_pull_listview, container, false);
+//        mFragmentBinding = FragmentMvvmImageHeadfootPullListviewBinding.inflate(inflater,container, false);
         mFragmentBinding.setView(this);
         mFragmentBinding.setViewmodel(mViewModel);
         setHasOptionsMenu(true);

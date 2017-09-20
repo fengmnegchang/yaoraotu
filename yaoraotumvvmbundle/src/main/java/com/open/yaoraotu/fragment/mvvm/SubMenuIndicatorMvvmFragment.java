@@ -1,5 +1,6 @@
 package com.open.yaoraotu.fragment.mvvm;
 
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.os.Message;
 import android.support.annotation.Nullable;
@@ -14,6 +15,7 @@ import com.open.android.fragment.BaseV4MVPFragment;
 import com.open.indicator.TabPageIndicator;
 import com.open.yaoraotu.bean.MasonryBean;
 import com.open.yaoraotu.json.MasonryJson;
+import com.open.yaoraotu.mvvm.R;
 import com.open.yaoraotu.mvvm.databinding.FragmentMvvmSubIndicatorViewpagerBinding;
 import com.open.yaoraotu.viewmodel.CommonNavigator;
 import com.open.yaoraotu.viewmodel.MasonryGridViewModel;
@@ -60,7 +62,8 @@ public class SubMenuIndicatorMvvmFragment  extends BaseV4MVPFragment<MasonryBean
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        mFragmentBinding = FragmentMvvmSubIndicatorViewpagerBinding.inflate(inflater, container, false);
+        mFragmentBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_mvvm_sub_indicator_viewpager, container, false);
+//        mFragmentBinding = FragmentMvvmSubIndicatorViewpagerBinding.inflate(inflater, container, false);
         mFragmentBinding.setView(this);
         mFragmentBinding.setViewmodel(mViewModel);
         setHasOptionsMenu(true);

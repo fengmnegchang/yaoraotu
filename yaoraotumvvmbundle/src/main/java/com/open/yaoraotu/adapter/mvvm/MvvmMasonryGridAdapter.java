@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.open.yaoraotu.bean.MasonryBean;
+import com.open.yaoraotu.mvvm.R;
 import com.open.yaoraotu.mvvm.databinding.AdapterMvvmMasonryGridBinding;
 import com.open.yaoraotu.viewmodel.itemview.MasonryGridItemViewModel;
 
@@ -36,8 +37,8 @@ public class MvvmMasonryGridAdapter extends CommonMvvmAdapter<MasonryBean,Adapte
             LayoutInflater inflater = LayoutInflater.from(parent.getContext());
 
             // Create the binding
-//            mBinding = DataBindingUtil.inflate(inflater, R.layout.adapter_mvvm_hot_top, parent, false);
-            mBinding = AdapterMvvmMasonryGridBinding.inflate(inflater, parent, false);
+            mBinding = DataBindingUtil.inflate(inflater, R.layout.adapter_mvvm_masonry_grid, parent, false);
+//            mBinding = AdapterMvvmMasonryGridBinding.inflate(inflater, parent, false);
         }else{
             // Recycling view
             mBinding = DataBindingUtil.getBinding(convertView);

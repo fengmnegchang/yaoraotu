@@ -1,5 +1,6 @@
 package com.open.yaoraotu.fragment.mvvm;
 
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
@@ -11,8 +12,9 @@ import android.widget.TextView;
 import com.open.android.fragment.BaseV4MVPFragment;
 import com.open.yaoraotu.adapter.mvvm.MvvmImagePagerAdapter;
 import com.open.yaoraotu.bean.MasonryBean;
-import com.open.yaoraotu.mvvm.databinding.FragmentMvvmImageViewpagerBinding;
 import com.open.yaoraotu.json.MasonryJson;
+import com.open.yaoraotu.mvvm.R;
+import com.open.yaoraotu.mvvm.databinding.FragmentMvvmImageViewpagerBinding;
 import com.open.yaoraotu.viewmodel.CommonNavigator;
 import com.open.yaoraotu.viewmodel.ImagePagerAdapterViewModel;
 
@@ -57,7 +59,8 @@ public class ImagePagerAdapterMvvmFragment extends BaseV4MVPFragment<MasonryBean
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        mBinding = FragmentMvvmImageViewpagerBinding.inflate(inflater, container, false);
+        mBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_mvvm_image_viewpager, container, false);
+//        mBinding = FragmentMvvmImageViewpagerBinding.inflate(inflater, container, false);
         mBinding.setView(this);
         mBinding.setViewmodel(mViewModel);
         setHasOptionsMenu(true);

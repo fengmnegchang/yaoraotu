@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.open.yaoraotu.bean.MasonryBean;
+import com.open.yaoraotu.mvvm.R;
 import com.open.yaoraotu.mvvm.databinding.AdapterMvvmNewListBinding;
 import com.open.yaoraotu.viewmodel.itemview.NewListItemViewModel;
 
@@ -35,8 +36,8 @@ public class MvvmNewListAdapter extends CommonMvvmAdapter<MasonryBean,AdapterMvv
             LayoutInflater inflater = LayoutInflater.from(parent.getContext());
 
             // Create the binding
-//            mBinding = DataBindingUtil.inflate(inflater, R.layout.adapter_mvvm_new_list, parent, false);
-            mBinding = AdapterMvvmNewListBinding.inflate(inflater, parent, false);
+            mBinding = DataBindingUtil.inflate(inflater, R.layout.adapter_mvvm_new_list, parent, false);
+//            mBinding = AdapterMvvmNewListBinding.inflate(inflater, parent, false);
         }else{
             // Recycling view
             mBinding = DataBindingUtil.getBinding(convertView);

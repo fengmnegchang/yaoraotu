@@ -1,5 +1,6 @@
 package com.open.yaoraotu.fragment.mvvm;
 
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -14,6 +15,7 @@ import com.open.yaoraotu.activity.mvvm.MasonryImagePullListMvvmActivity;
 import com.open.yaoraotu.adapter.mvvm.MvvmNewListAdapter;
 import com.open.yaoraotu.bean.MasonryBean;
 import com.open.yaoraotu.json.MasonryJson;
+import com.open.yaoraotu.mvvm.R;
 import com.open.yaoraotu.mvvm.databinding.FragmentMvvmNewListPullListviewBinding;
 import com.open.yaoraotu.viewmodel.NewListPullListViewModel;
 
@@ -52,8 +54,8 @@ public class NewListPullListMvvmFragment extends CommonPullListViewMVVMFragment<
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-//        mFragmentBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_mvvm_new_list_pull_listview, container, false);
-        mFragmentBinding = FragmentMvvmNewListPullListviewBinding.inflate(inflater,container, false);
+        mFragmentBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_mvvm_new_list_pull_listview, container, false);
+//        mFragmentBinding = FragmentMvvmNewListPullListviewBinding.inflate(inflater,container, false);
         mFragmentBinding.setView(this);
         mFragmentBinding.setViewmodel(mViewModel);
         setHasOptionsMenu(true);

@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.open.yaoraotu.bean.MasonryBean;
+import com.open.yaoraotu.mvvm.R;
 import com.open.yaoraotu.mvvm.databinding.AdapterMvvmMenuListBinding;
 import com.open.yaoraotu.viewmodel.itemview.MenuItemViewModel;
 
@@ -36,8 +37,8 @@ public class MvvmMenuAdapter extends  CommonMvvmAdapter<MasonryBean,AdapterMvvmM
             LayoutInflater inflater = LayoutInflater.from(parent.getContext());
 
             // Create the binding
-//            mBinding = DataBindingUtil.inflate(inflater, R.layout.adapter_mvvm_new_list, parent, false);
-            mBinding = AdapterMvvmMenuListBinding.inflate(inflater, parent, false);
+            mBinding = DataBindingUtil.inflate(inflater, R.layout.adapter_mvvm_menu_list, parent, false);
+//            mBinding = AdapterMvvmMenuListBinding.inflate(inflater, parent, false);
         }else{
             // Recycling view
             mBinding = DataBindingUtil.getBinding(convertView);
