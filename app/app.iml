@@ -155,9 +155,11 @@
     <orderEntry type="module" module-name="androidvolleylibrary" exported="" />
     <orderEntry type="module" module-name="androidcommonlibrary" exported="" />
     <orderEntry type="module" module-name="androidindicatorlibrary" exported="" />
+    <orderEntry type="module" module-name="yaoraotumvvmbundle" exported="" />
     <orderEntry type="module" module-name="splashlibrary" exported="" />
     <orderEntry type="module" module-name="applicationlibrary" exported="" />
     <orderEntry type="module" module-name="commonlibrary" exported="" />
+    <orderEntry type="module" module-name="yaoraotumvpbundle" exported="" />
     <orderEntry type="module" module-name="andenginetasklibrary" exported="" />
     <orderEntry type="module" module-name="androidpulltorefreshlibrary" exported="" />
     <orderEntry type="library" exported="" name="org.apache.http.legacy-android-25" level="project" />
