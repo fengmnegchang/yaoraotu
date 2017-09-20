@@ -19,4 +19,5 @@
 	<string name="app_mvvm_top_theme_pullgrid_desp">mvvm top theme列表grid</string>
 	<string name="app_mvvm_leftmenu_pulllist_desp">mvvm left menu</string>
 	<string name="app_mvvm_masonry_pullgrid_desp">mvvm Masonry列表grid</string>
+	<string name="app_mvvm_imagelist_pulllist_desp">mvvm image list</string>
 </resources>

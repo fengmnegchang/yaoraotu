@@ -137,6 +137,12 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:description="@string/app_mvvm_masonry_pullgrid_desp" >
         </activity>
+        <!-- mvvm image list -->
+        <activity
+            android:name="com.open.yaoraotu.activity.mvvm.MasonryImagePullListMvvmActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_mvvm_imagelist_pulllist_desp" >
+        </activity>
         <!-- 所有类列表 -->
         <activity
             android:name="com.open.android.activity.common.CommonALLActivity"

@@ -1,12 +1,8 @@
 package com.open.yaoraotu.viewmodel.itemview;
 
-import android.databinding.BaseObservable;
-import android.databinding.Bindable;
-import android.databinding.ObservableField;
 import android.view.View;
 
 import com.open.yaoraotu.activity.MasonryImagePullListActivity;
-import com.open.yaoraotu.bean.MasonryBean;
 
 /**
  * ****************************************************************************************************************************************************************************
@@ -18,15 +14,10 @@ import com.open.yaoraotu.bean.MasonryBean;
  * @modifyAuthor:
  * @description: ****************************************************************************************************************************************************************************
  */
-public class NewListItemViewModel extends BaseObservable {
-    private final ObservableField<MasonryBean> mMasonryBeanObservable = new ObservableField<>();
+public class NewListItemViewModel extends CommonItemViewModel  {
 
     public NewListItemViewModel(){
 
-    }
-
-    public void setMasonryBeanObservable(MasonryBean mMasonryBeanObservable) {
-        this.mMasonryBeanObservable.set(mMasonryBeanObservable);
     }
 
     /**
@@ -37,15 +28,5 @@ public class NewListItemViewModel extends BaseObservable {
         MasonryImagePullListActivity.startMasonryImagePullListActivity(view.getContext(),getHref());
     }
 
-
-    @Bindable
-    public String getTitle(){
-        return mMasonryBeanObservable.get().getTitle();
-    }
-
-    @Bindable
-    public String getHref(){
-        return mMasonryBeanObservable.get().getHref();
-    }
 
 }
