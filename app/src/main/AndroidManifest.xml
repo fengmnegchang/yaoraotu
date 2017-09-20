@@ -30,7 +30,7 @@
         android:theme="@style/AppTheme" >
         <!-- zbjuran 启动 -->
          <activity
-            android:name="com.open.yaoraotu.activity.SplashActivity"
+            android:name="com.open.yaoraotu.splash.activity.SplashActivity"
             android:theme="@style/AppTheme"
             android:description="@string/app_name"  >
             <intent-filter>

@@ -1,1 +1,1 @@
-include ':app',':andenginetasklibrary',':androidcommonlibrary',':androidindicatorlibrary',':androidpulltorefreshlibrary',':androidslidingmenulibrary',':androidvolleylibrary'
+include ':app', ':andenginetasklibrary', ':androidcommonlibrary', ':androidindicatorlibrary', ':androidpulltorefreshlibrary', ':androidslidingmenulibrary', ':androidvolleylibrary', ':splashlibrary', ':applicationlibrary', ':commonlibrary', ':yaoraotumvpbundle', ':yaoraotumvvmbundle', ':yaoraoturemotebundle'
