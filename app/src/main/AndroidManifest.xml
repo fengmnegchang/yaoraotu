@@ -28,6 +28,16 @@
         android:label="@string/app_name"
         android:name="com.open.yaoraotu.application.CommonApplication"
         android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.taobao.android.hotfix.IDSECRET"
+            android:value="24630321-1" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.APPSECRET"
+            android:value="24630321" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.RSASECRET"
+            android:value="e6bd94bf4abc9159c34f9713e4a9629a" />
+
         <activity android:name=".activity.UpdateDemoActivity" />
         <activity android:name=".activity.BundleDemoActivity" />
         <activity android:name=".activity.DexPatchDemoActivity" />
