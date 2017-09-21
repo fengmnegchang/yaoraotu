@@ -2,7 +2,7 @@
 
     package="com.open.yaoraotu.splash">
 
-    <application android:allowBackup="true" android:label="@string/app_name"
+    <application android:allowBackup="true"
         android:supportsRtl="true">
         <!-- zbjuran 启动 -->
         <activity

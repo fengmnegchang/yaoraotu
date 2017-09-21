@@ -2,7 +2,7 @@
 
     package="com.open.yaoraotu.mvvm">
 
-    <application android:allowBackup="true" android:label="@string/app_name"
+    <application android:allowBackup="true"
         android:supportsRtl="true">
         <!-- mvvm hot top列表 -->
         <activity
