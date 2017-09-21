@@ -79,8 +79,18 @@ public class CommonApplication extends Application{
 	@Override
     public void onCreate() {
         super.onCreate();
-        initAtlas();
-        initHotfix();
+        try{
+            initAtlas();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        try {
+            initHotfix();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
         DiskCacheConfig diskCacheConfig = DiskCacheConfig.newBuilder(this)
                 .setBaseDirectoryPath(new File(Environment.getExternalStorageDirectory() +"/"+ getPackageName()+"/"))
                 .setBaseDirectoryName("image_cache")

@@ -123,7 +123,7 @@ public class HotImagePushService extends Service {
         int icon = R.drawable.icon;
         Notification.Builder builder1 = new Notification.Builder(this);
         builder1.setSmallIcon(icon); //设置图标
-        builder1.setTicker("New Message");
+        builder1.setTicker("妖娆图 养眼美女");
         builder1.setContentTitle("妖娆图 养眼美女"); //设置标题
         builder1.setContentText(msg); //消息内容
         builder1.setWhen(System.currentTimeMillis()); //发送时间
@@ -174,7 +174,7 @@ public class HotImagePushService extends Service {
                 java.util.Random random=new java.util.Random();// 定义随机类
                 int size=random.nextInt(list.size());// 返回[0,10)集合中的整数，注意不包括10
                 MasonryBean bean = list.get(size);
-                showNotification(bean.getAlt(),bean.getHref());
+                showNotification(bean.getTitle()+bean.getAlt(),bean.getHref());
 
                 Message msg = mHandler.obtainMessage();
                 msg.what=1000;
