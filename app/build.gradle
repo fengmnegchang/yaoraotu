@@ -143,6 +143,7 @@ dependencies {
     bundleCompile project(':yaoraotumvpbundle')
     bundleCompile project(':yaoraotumvvmbundle')
     bundleCompile project(':yaoraoturemotebundle')
+    bundleCompile project(':yaoraotuservicebundle')
 
 }
 

@@ -17,9 +17,10 @@ import android.view.Window;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
-import com.open.yaoraotu.mvp.R;
+import com.open.android.utils.ServiceUtils;
 import com.open.yaoraotu.fragment.MenuPullListFragment;
 import com.open.yaoraotu.fragment.ThemePullListHeadFootFragment;
+import com.open.yaoraotu.mvp.R;
 import com.open.yaoraotu.presenter.impl.MasonryPullGridPresenterImpl;
 import com.open.yaoraotu.presenter.impl.ReflectJsoupPresenterImpl;
 import com.open.yaoraotu.utils.UrlUtils;
@@ -53,6 +54,10 @@ public class MainSlideMenuActivity extends SlidingFragmentActivity {
 		ThemePullListHeadFootFragment fragment = ThemePullListHeadFootFragment.newInstance(true);
 		getSupportFragmentManager().beginTransaction().replace(R.id.layout_viewpager, fragment).commit();
 		new MasonryPullGridPresenterImpl(this, fragment,url);
+
+		if (!ServiceUtils.isServiceExisted(this, "HotImagePushService")) {
+			ServiceUtils.startPollingService(this, 5, "com.open.yaoraotu.service.HotImagePushService", "com.open.yaoraotu.service.HotImagePushService");
+		}
 	}
 
 	private void initRightMenu() {
