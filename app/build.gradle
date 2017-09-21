@@ -67,10 +67,11 @@ atlas {
     atlasEnabled true
     tBuildConfig {
         autoStartBundles = ['com.open.yaoraotu.mvp'] //自启动bundle配置
-        outOfApkBundles = ['yaoraoturemotebundle']
+        outOfApkBundles = ['yaoraoturemotebundle','yaoraotuweexremotebundle']
         preLaunch = 'com.open.yaoraotu.atlas.CommonPreLaunch'
         classInject false
-        dataBindingBundles = ['com.open.yaoraotu.mvvm']
+        //多个bundle
+        dataBindingBundles = ['com.open.yaoraotu.mvvm','com.open.yaoraotu.m']
     }
 
     manifestOptions {
@@ -144,6 +145,8 @@ dependencies {
     bundleCompile project(':yaoraotumvvmbundle')
     bundleCompile project(':yaoraoturemotebundle')
     bundleCompile project(':yaoraotuservicebundle')
+    bundleCompile project(':yaoraotumbundle')
+    bundleCompile project(':yaoraotuweexremotebundle')
 
 }
 

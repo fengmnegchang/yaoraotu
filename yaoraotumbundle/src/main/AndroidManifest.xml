@@ -4,7 +4,12 @@
 
     <application android:allowBackup="true"
         android:supportsRtl="true">
-
+        <!-- mvvm menu grid -->
+        <activity
+            android:name="com.open.yaoraotu.m.activity.MenuPullGridMvvmActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_mvvm_menu_pullgrid_desp" >
+        </activity>
     </application>
 
 </manifest>
