@@ -14,10 +14,11 @@ import com.open.yaoraotu.bean.MasonryGroupBean;
 import com.open.yaoraotu.json.MasonryGroupJson;
 import com.open.yaoraotu.m.R;
 import com.open.yaoraotu.m.adapter.MvvmGroupHomeExpandableListAdapter;
-import com.open.yaoraotu.m.adapter.MvvmGroupMenuExpandableListAdapter;
 import com.open.yaoraotu.m.databinding.FragmentMvvmGroupHomeExpandableListviewBinding;
 import com.open.yaoraotu.m.viewmodel.CommonNavigator;
 import com.open.yaoraotu.m.viewmodel.GroupHomeExpandableListViewModel;
+import com.open.yaoraotu.m.viewmodel.HomeDotViewPagerViewModel;
+import com.open.yaoraotu.utils.UrlUtils;
 
 import java.util.ArrayList;
 
@@ -37,6 +38,7 @@ public class GroupHomeExpandableListMvvmFragment extends BaseV4MVPFragment<Mason
     public FragmentMvvmGroupHomeExpandableListviewBinding mFragmentBinding;
     public MvvmGroupHomeExpandableListAdapter mAdapter;
     public ExpandableListView expendablelistview;
+    public View headView;
 
     public GroupHomeExpandableListMvvmFragment() {
         // Requires empty public constructor
@@ -61,6 +63,7 @@ public class GroupHomeExpandableListMvvmFragment extends BaseV4MVPFragment<Mason
         mFragmentBinding.setViewmodel(mViewModel);
         setHasOptionsMenu(true);
         View root = mFragmentBinding.getRoot();
+        headView = LayoutInflater.from(getActivity()).inflate(R.layout.layout_home_head,null);
         return root;
     }
 
@@ -68,6 +71,14 @@ public class GroupHomeExpandableListMvvmFragment extends BaseV4MVPFragment<Mason
     public void initValues() {
         super.initValues();
         expendablelistview =  mFragmentBinding.expendablelistview;
+        expendablelistview.addHeaderView(headView);
+        //head
+        HomeDotPagerMvvmFragment fragment =  HomeDotPagerMvvmFragment.newInstance(UrlUtils.YAORAOTU_TAOTU,true);
+        getChildFragmentManager().beginTransaction().replace(R.id.id_home_head, fragment).commit();
+
+        HomeDotViewPagerViewModel mViewModel = new HomeDotViewPagerViewModel(getActivity(),"getTopPager");
+        fragment.setViewModel(mViewModel);
+
         expendablelistview.setGroupIndicator(null);
         mAdapter = new MvvmGroupHomeExpandableListAdapter(
                 getActivity(),
