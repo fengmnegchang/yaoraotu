@@ -16,6 +16,12 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:description="@string/app_mvvm_menu_expandable_desp" >
         </activity>
+        <!-- mvvm home expandable -->
+        <activity
+            android:name="com.open.yaoraotu.m.activity.GroupHomeExpandableListMvvmActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_mvvm_home_expandable_desp" >
+        </activity>
     </application>
 
 </manifest>

@@ -24,4 +24,5 @@
 	<string name="app_mvvm_image_viewpager_desp">mvvm image viewpager</string>
 	<string name="app_mvvm_menu_pullgrid_desp">mvvm  grid menu</string>
 	<string name="app_mvvm_menu_expandable_desp">mvvm  expandable menu</string>
+	<string name="app_mvvm_home_expandable_desp">mvvm  expandable home</string>
 </resources>

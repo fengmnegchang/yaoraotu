@@ -21,10 +21,10 @@
             android:layout_gravity="center"
             android:clipChildren="false"
             android:gravity="center_vertical"
-            android:horizontalSpacing="1dp"
+            android:horizontalSpacing="5dp"
             android:numColumns="3"
             android:scrollbars="none"
-            android:verticalSpacing="1dp" />
+            android:verticalSpacing="5dp" />
 
     </RelativeLayout>
 </layout>
