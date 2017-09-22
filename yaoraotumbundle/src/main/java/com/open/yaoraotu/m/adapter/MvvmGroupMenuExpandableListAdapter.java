@@ -5,6 +5,8 @@ import android.databinding.DataBindingUtil;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.TextView;
 
 import com.open.android.adapter.CommonExpandableListAdapter;
 import com.open.android.view.ExpendGridView;
@@ -15,6 +17,7 @@ import com.open.yaoraotu.m.databinding.AdapterMvvmMenuChildViewBinding;
 import com.open.yaoraotu.m.databinding.AdapterMvvmMenuGroupViewBinding;
 import com.open.yaoraotu.m.viewmodel.ChildViewViewModel;
 import com.open.yaoraotu.m.viewmodel.itemview.GroupViewItemViewModel;
+import com.open.yaoraotu.utils.ActivityUtils;
 
 import java.util.List;
 
@@ -47,7 +50,7 @@ public class MvvmGroupMenuExpandableListAdapter extends CommonExpandableListAdap
     @Override
     public View getGroupView(int groupPosition, boolean arg1, View convertView, ViewGroup parent) {
         AdapterMvvmMenuGroupViewBinding mBinding;
-        MasonryGroupBean bean = (MasonryGroupBean) getGroup(groupPosition);
+        final MasonryGroupBean bean = (MasonryGroupBean) getGroup(groupPosition);
         if (convertView == null) {
             // Inflate
             LayoutInflater inflater = LayoutInflater.from(parent.getContext());
@@ -63,6 +66,14 @@ public class MvvmGroupMenuExpandableListAdapter extends CommonExpandableListAdap
         GroupViewItemViewModel viewModel = new GroupViewItemViewModel();
         mBinding.setViewmodel(viewModel);
         viewModel.setMasonryGroupBeanObservable(bean);
+        TextView text_moduleTitle = mBinding.textModuleTitle;
+        text_moduleTitle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ActivityUtils.startBundleActivity(view.getContext(),bean.getHref(),"com.open.yaoraotu.activity.SubMenuIndicatorFragmentActivity");
+//                SubMenuIndicatorFragmentActivity.startSubMenuIndicatorFragmentActivity(mContext, bean.getHref(), position);
+            }
+        });
         return mBinding.getRoot();
     }
 
@@ -102,9 +113,18 @@ public class MvvmGroupMenuExpandableListAdapter extends CommonExpandableListAdap
         }
 
         ExpendGridView gridView = mBinding.gridView;
-        List<MasonryBean> clist = getGroup(groupPosition).getList();
+        final List<MasonryBean> clist = getGroup(groupPosition).getList();
         MvvmMenuGridAdapter mvvmMenuGridAdapter = new MvvmMenuGridAdapter(parent.getContext(),clist);
         gridView.setAdapter(mvvmMenuGridAdapter);
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                if(clist!=null && clist.size()>0 && clist.get((int)l)!=null){
+                    MasonryBean cbean = clist.get((int)l);
+                    ActivityUtils.startBundleActivity(view.getContext(),cbean.getHref(),"com.open.yaoraotu.activity.MasonryPullGridActivity");
+                }
+            }
+        });
 
         ChildViewViewModel viewModel = new ChildViewViewModel(parent.getContext());
 //        viewModel.setItems(gridView,clist);
