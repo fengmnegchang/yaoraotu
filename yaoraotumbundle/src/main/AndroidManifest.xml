@@ -10,6 +10,12 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:description="@string/app_mvvm_menu_pullgrid_desp" >
         </activity>
+        <!-- mvvm menu expandable -->
+        <activity
+            android:name="com.open.yaoraotu.m.activity.GroupMenuExpandableListMvvmActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_mvvm_menu_expandable_desp" >
+        </activity>
     </application>
 
 </manifest>
