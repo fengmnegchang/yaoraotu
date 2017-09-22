@@ -26,4 +26,5 @@
 	<string name="app_mvvm_menu_expandable_desp">mvvm  expandable menu</string>
 	<string name="app_mvvm_home_expandable_desp">mvvm  expandable home</string>
 	<string name="app_mvvm_home_dot_desp">mvvm home dot</string>
+	<string name="app_mvvm_m_slide_menu_desp">m slide menu</string>
 </resources>

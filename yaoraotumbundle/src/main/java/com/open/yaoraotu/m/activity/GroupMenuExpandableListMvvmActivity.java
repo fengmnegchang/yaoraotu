@@ -3,7 +3,7 @@ package com.open.yaoraotu.m.activity;
 import android.content.Context;
 import android.content.Intent;
 
-import com.open.android.activity.common.CommonTitleBarActivity;
+import com.open.android.activity.common.CommonCommonFragmentActivity;
 import com.open.yaoraotu.m.R;
 import com.open.yaoraotu.m.fragment.GroupMenuExpandableListMvvmFragment;
 import com.open.yaoraotu.m.viewmodel.GroupMenuExpandableListViewModel;
@@ -19,7 +19,7 @@ import com.open.yaoraotu.utils.UrlUtils;
  * @modifyAuthor:
  * @description: ****************************************************************************************************************************************************************************
  */
-public class GroupMenuExpandableListMvvmActivity extends CommonTitleBarActivity {
+public class GroupMenuExpandableListMvvmActivity extends CommonCommonFragmentActivity {
     /*
      * (non-Javadoc)
      *
@@ -34,7 +34,7 @@ public class GroupMenuExpandableListMvvmActivity extends CommonTitleBarActivity 
         } else {
             url = UrlUtils.YAORAOTU_TAOTU_TUIGIRL;
         }
-        setCenterTextValue(getResources().getString(R.string.app_name));
+//        setCenterTextValue(getResources().getString(R.string.app_name));
         addfragment();
     }
     /*
@@ -46,7 +46,7 @@ public class GroupMenuExpandableListMvvmActivity extends CommonTitleBarActivity 
     public void addfragment() {
         // TODO Auto-generated method stub
         GroupMenuExpandableListMvvmFragment fragment =  GroupMenuExpandableListMvvmFragment.newInstance(url,true);
-        getSupportFragmentManager().beginTransaction().replace(R.id.layout_content, fragment).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.id_common_fragment, fragment).commit();
 
         GroupMenuExpandableListViewModel mViewModel = new GroupMenuExpandableListViewModel(this,"getGroupMenu");
         fragment.setViewModel(mViewModel);

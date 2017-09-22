@@ -3,13 +3,16 @@ package com.open.yaoraotu.m.adapter;
 import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
+import com.facebook.drawee.view.SimpleDraweeView;
 import com.open.android.adapter.CommonPagerAdapter;
 import com.open.yaoraotu.bean.MasonryBean;
 import com.open.yaoraotu.m.R;
 import com.open.yaoraotu.m.databinding.AdapterMvvmDotViewpagerBinding;
 import com.open.yaoraotu.m.viewmodel.itemview.HomeDotItemViewModel;
+import com.open.yaoraotu.utils.ActivityUtils;
 
 import java.util.List;
 
@@ -31,7 +34,7 @@ public class MvvmHomeDotViewPagerAdapter extends CommonPagerAdapter<MasonryBean>
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         AdapterMvvmDotViewpagerBinding mBinding;
-        MasonryBean bean = (MasonryBean) getItem(position);
+        final MasonryBean bean = (MasonryBean) getItem(position);
 //        View convertView = null;
 //        if (convertView == null) {
         // Inflate
@@ -45,6 +48,13 @@ public class MvvmHomeDotViewPagerAdapter extends CommonPagerAdapter<MasonryBean>
 //            mBinding = DataBindingUtil.getBinding(convertView);
 //        }
 
+        SimpleDraweeView draweeview = mBinding.draweeview;
+        draweeview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ActivityUtils.startBundleActivity(view.getContext(),bean.getHref(),"com.open.yaoraotu.activity.MasonryImagePullListActivity");
+            }
+        });
         HomeDotItemViewModel viewModel = new HomeDotItemViewModel();
         mBinding.setViewmodel(viewModel);
         viewModel.setMasonryBeanObservable(bean);
