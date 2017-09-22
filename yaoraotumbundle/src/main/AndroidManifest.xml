@@ -22,6 +22,12 @@
             android:configChanges="keyboard|keyboardHidden|navigation"
             android:description="@string/app_mvvm_home_expandable_desp" >
         </activity>
+        <!-- mvvm home dot -->
+        <activity
+            android:name="com.open.yaoraotu.m.activity.HomeDotPagerMvvmActivity"
+            android:configChanges="keyboard|keyboardHidden|navigation"
+            android:description="@string/app_mvvm_home_dot_desp" >
+        </activity>
     </application>
 
 </manifest>

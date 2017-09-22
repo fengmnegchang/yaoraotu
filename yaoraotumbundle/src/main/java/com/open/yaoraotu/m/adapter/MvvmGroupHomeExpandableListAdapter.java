@@ -18,6 +18,7 @@ import com.open.yaoraotu.m.databinding.AdapterMvvmMenuGroupViewBinding;
 import com.open.yaoraotu.m.viewmodel.ChildViewViewModel;
 import com.open.yaoraotu.m.viewmodel.itemview.GroupViewItemViewModel;
 import com.open.yaoraotu.utils.ActivityUtils;
+import com.open.yaoraotu.utils.UrlUtils;
 
 import java.util.List;
 
@@ -48,7 +49,7 @@ public class MvvmGroupHomeExpandableListAdapter extends CommonExpandableListAdap
 
 
     @Override
-    public View getGroupView(int groupPosition, boolean arg1, View convertView, ViewGroup parent) {
+    public View getGroupView(final int groupPosition, boolean arg1, View convertView, ViewGroup parent) {
         AdapterMvvmMenuGroupViewBinding mBinding;
         final MasonryGroupBean bean = (MasonryGroupBean) getGroup(groupPosition);
         if (convertView == null) {
@@ -70,7 +71,7 @@ public class MvvmGroupHomeExpandableListAdapter extends CommonExpandableListAdap
         text_moduleTitle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ActivityUtils.startBundleActivity(view.getContext(),bean.getHref(),"com.open.yaoraotu.activity.SubMenuIndicatorFragmentActivity");
+                ActivityUtils.startBundleActivity(view.getContext(),bean.getHref().replace(UrlUtils.YAORAOTU_M,UrlUtils.YAORAOTU),"com.open.yaoraotu.activity.SubMenuIndicatorFragmentActivity",groupPosition);
 //                SubMenuIndicatorFragmentActivity.startSubMenuIndicatorFragmentActivity(mContext, bean.getHref(), position);
             }
         });
@@ -121,7 +122,7 @@ public class MvvmGroupHomeExpandableListAdapter extends CommonExpandableListAdap
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 if(clist!=null && clist.size()>0 && clist.get((int)l)!=null){
                     MasonryBean cbean = clist.get((int)l);
-                    ActivityUtils.startBundleActivity(view.getContext(),cbean.getHref(),"com.open.yaoraotu.activity.MasonryImagePullListActivity");
+                    ActivityUtils.startBundleActivity(view.getContext(),cbean.getHref().replace(UrlUtils.YAORAOTU_M,UrlUtils.YAORAOTU),"com.open.yaoraotu.activity.MasonryImagePullListActivity");
                 }
             }
         });

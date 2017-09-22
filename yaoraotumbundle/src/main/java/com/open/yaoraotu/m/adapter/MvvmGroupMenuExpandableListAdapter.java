@@ -48,7 +48,7 @@ public class MvvmGroupMenuExpandableListAdapter extends CommonExpandableListAdap
 
 
     @Override
-    public View getGroupView(int groupPosition, boolean arg1, View convertView, ViewGroup parent) {
+    public View getGroupView(final int groupPosition, boolean arg1, View convertView, ViewGroup parent) {
         AdapterMvvmMenuGroupViewBinding mBinding;
         final MasonryGroupBean bean = (MasonryGroupBean) getGroup(groupPosition);
         if (convertView == null) {
@@ -70,7 +70,7 @@ public class MvvmGroupMenuExpandableListAdapter extends CommonExpandableListAdap
         text_moduleTitle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ActivityUtils.startBundleActivity(view.getContext(),bean.getHref(),"com.open.yaoraotu.activity.SubMenuIndicatorFragmentActivity");
+                ActivityUtils.startBundleActivity(view.getContext(),bean.getHref(),"com.open.yaoraotu.activity.SubMenuIndicatorFragmentActivity",groupPosition);
 //                SubMenuIndicatorFragmentActivity.startSubMenuIndicatorFragmentActivity(mContext, bean.getHref(), position);
             }
         });

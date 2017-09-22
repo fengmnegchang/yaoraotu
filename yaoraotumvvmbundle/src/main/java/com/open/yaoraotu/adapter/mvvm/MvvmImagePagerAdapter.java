@@ -3,7 +3,6 @@ package com.open.yaoraotu.adapter.mvvm;
 import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import com.open.yaoraotu.bean.MasonryBean;
@@ -32,7 +31,7 @@ public class MvvmImagePagerAdapter extends  CommonMvvmPagerAdapter<MasonryBean,A
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         final MasonryBean bean = (MasonryBean) getItem(position);
-        View convertView = null;
+//        View convertView = null;
 //        if (convertView == null) {
         // Inflate
         LayoutInflater inflater = LayoutInflater.from(mContext);
