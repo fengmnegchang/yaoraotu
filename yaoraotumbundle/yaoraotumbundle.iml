@@ -151,27 +151,5 @@
     <orderEntry type="module" module-name="andenginetasklibrary" exported="" />
     <orderEntry type="module" module-name="androidpulltorefreshlibrary" exported="" />
     <orderEntry type="library" exported="" name="org.apache.http.legacy-android-25" level="project" />
-    <orderEntry type="library" exported="" name="appcompat-v7-22.0.0" level="project" />
-    <orderEntry type="library" exported="" name="support-v4-22.0.0" level="project" />
-    <orderEntry type="library" exported="" name="support-annotations-22.0.0" level="project" />
-    <orderEntry type="library" exported="" name="commons-beanutils-1.7.0" level="project" />
-    <orderEntry type="library" exported="" name="jsoup-1.8.1" level="project" />
-    <orderEntry type="library" exported="" name="htmllexer" level="project" />
-    <orderEntry type="library" exported="" name="gson-2.2.1" level="project" />
-    <orderEntry type="library" exported="" name="htmlparser" level="project" />
-    <orderEntry type="library" exported="" name="json-lib-2.1-jdk15" level="project" />
-    <orderEntry type="library" exported="" name="commons-lang-2.5" level="project" />
-    <orderEntry type="library" exported="" name="commons-logging" level="project" />
-    <orderEntry type="library" exported="" name="jxl" level="project" />
-    <orderEntry type="library" exported="" name="ezmorph-1.0.3" level="project" />
-    <orderEntry type="library" exported="" name="commons-collections-3.1" level="project" />
-    <orderEntry type="library" exported="" name="commons-httpclient-3.1" level="project" />
-    <orderEntry type="library" exported="" name="alicloud-android-utils-1.0.3" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="multidex-instrumentation-1.0.1" level="project" />
-    <orderEntry type="library" exported="" name="guava-18.0" level="project" />
-    <orderEntry type="library" exported="" name="fastjson-1.1.45.android" level="project" />
-    <orderEntry type="library" exported="" name="hotfix_core-release-3.0.8" level="project" />
-    <orderEntry type="library" exported="" name="utdid4all-1.1.5.3_proguard" level="project" />
-    <orderEntry type="library" exported="" name="multidex-1.0.1" level="project" />
   </component>
 </module>

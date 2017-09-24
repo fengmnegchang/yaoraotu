@@ -72,4 +72,19 @@ public class ActivityUtils {
         intent.setClassName(context,activityName);
         context.startActivity(intent);
     }
+
+    /**
+     * 跨bundle启动activity
+     * @param context
+     * @param url
+     * @param activityName 类名全路径 com.open.android.activity.common.CommonALLActivity
+     */
+    public static void startBundleActivity(Context context, String url,String activityName,int pageNo) {
+        Intent intent = new Intent();
+        intent.putExtra("URL", url);
+        intent.putExtra("PAGE_NO", pageNo);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.setClassName(context,activityName);
+        context.startActivity(intent);
+    }
 }

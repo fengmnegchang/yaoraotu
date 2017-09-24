@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.open.yaoraotu.m.viewmodel.itemview.HomeGridItemViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="2dp"
+        android:paddingLeft="1dp"
+        android:paddingRight="1dp"
+        android:paddingTop="2dp">
+        <!--android:onClick="@{viewmodel.onItemClick}"-->
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/draweeview"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_below="@+id/text_title"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            app:src="@{viewmodel.src}"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/text_camLiDes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/draweeview"
+            android:text="@{viewmodel.title}"
+            android:layout_marginTop="5dp"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+</layout>
