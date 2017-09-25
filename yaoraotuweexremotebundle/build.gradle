@@ -17,6 +17,13 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        /**
+         * 必须加，否则64位手机无法加载so文件
+         */
+        ndk {
+            abiFilters "x86"
+            abiFilters "armeabi"
+        }
 
     }
     buildTypes {
@@ -33,6 +40,26 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     providedCompile 'com.android.support:appcompat-v7:25.0.1'
+    providedCompile 'com.android.support:recyclerview-v7:25.0.1'
+
+    //weex
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    providedCompile  'com.alibaba:fastjson:1.1.45.android@jar'
+    providedCompile 'com.taobao.android:weex_sdk:0.9.5@aar'
+
+    //图片库
+    // 在 API < 14 上的机器支持 WebP 时，需要添加
+    providedCompile 'com.facebook.fresco:animated-base-support:0.12.0'
+    // 支持 GIF 动图，需要添加
+    providedCompile 'com.facebook.fresco:animated-gif:0.12.0'
+    // 支持 WebP （静态图+动图），需要添加
+    providedCompile 'com.facebook.fresco:animated-webp:0.12.0'
+    providedCompile 'com.facebook.fresco:webpsupport:0.12.0'
+    // 仅支持 WebP 静态图，需要添加
+    providedCompile 'com.facebook.fresco:webpsupport:0.12.0'
+    providedCompile 'com.facebook.fresco:fresco:0.12.0'
+    //compile 'com.github.bumptech.glide:glide:3.7.0'
     testCompile 'junit:junit:4.12'
     providedCompile project(':commonlibrary')
+    compile 'com.squareup.picasso:picasso:2.5.2'
 }

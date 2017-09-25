@@ -91,6 +91,13 @@ public class CommonApplication extends Application{
             e.printStackTrace();
         }
 
+//        try{
+//            InitConfig config=new InitConfig.Builder().setImgAdapter(new ImageAdapter()).build();
+//            WXSDKEngine.initialize(this,config);
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }
+
         DiskCacheConfig diskCacheConfig = DiskCacheConfig.newBuilder(this)
                 .setBaseDirectoryPath(new File(Environment.getExternalStorageDirectory() +"/"+ getPackageName()+"/"))
                 .setBaseDirectoryName("image_cache")
