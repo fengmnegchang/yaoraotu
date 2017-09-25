@@ -17,7 +17,6 @@ import android.view.Window;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
-import com.open.android.utils.ServiceUtils;
 import com.open.yaoraotu.m.R;
 import com.open.yaoraotu.m.fragment.GroupHomeExpandableListMvvmFragment;
 import com.open.yaoraotu.m.fragment.GroupMenuExpandableListMvvmFragment;
@@ -51,15 +50,15 @@ public class MSlideMenuActivity extends SlidingFragmentActivity {
 		// url = "http://www.umei.cc/bizhitupian/diannaobizhi/7628.htm";
 		// Fragment fragment = UmeiArticlePagerFragment.newInstance(url, true);
 //		Fragment fragment = MIndexPagerFragment.newInstance(url,true);
-		GroupHomeExpandableListMvvmFragment fragment = GroupHomeExpandableListMvvmFragment.newInstance(url,true);
+		GroupHomeExpandableListMvvmFragment fragment = GroupHomeExpandableListMvvmFragment.newInstance(UrlUtils.YAORAOTU_M,true);
 		getSupportFragmentManager().beginTransaction().replace(R.id.layout_viewpager, fragment).commit();
 
 		GroupHomeExpandableListViewModel mViewModel = new GroupHomeExpandableListViewModel(this,"getGroupHome");
 		fragment.setViewModel(mViewModel);
 
-		if (!ServiceUtils.isServiceExisted(this, "HotImagePushService")) {
-			ServiceUtils.startPollingService(this, 5, "com.open.yaoraotu.service.HotImagePushService", "com.open.yaoraotu.service.HotImagePushService");
-		}
+//		if (!ServiceUtils.isServiceExisted(this, "HotImagePushService")) {
+//			ServiceUtils.startPollingService(this, 5, "com.open.yaoraotu.service.HotImagePushService", "com.open.yaoraotu.service.HotImagePushService");
+//		}
 	}
 
 	private void initRightMenu() {

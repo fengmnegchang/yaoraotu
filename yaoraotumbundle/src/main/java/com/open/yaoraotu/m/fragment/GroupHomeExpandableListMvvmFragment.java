@@ -69,15 +69,14 @@ public class GroupHomeExpandableListMvvmFragment extends BaseV4MVPFragment<Mason
 
     @Override
     public void initValues() {
-        super.initValues();
         expendablelistview =  mFragmentBinding.expendablelistview;
         expendablelistview.addHeaderView(headView);
         //head
         HomeDotPagerMvvmFragment fragment =  HomeDotPagerMvvmFragment.newInstance(UrlUtils.YAORAOTU_TAOTU,true);
         getChildFragmentManager().beginTransaction().replace(R.id.id_home_head, fragment).commit();
 
-        HomeDotViewPagerViewModel mViewModel = new HomeDotViewPagerViewModel(getActivity(),"getTopPager");
-        fragment.setViewModel(mViewModel);
+        HomeDotViewPagerViewModel mDotViewModel = new HomeDotViewPagerViewModel(getActivity(),"getTopPager");
+        fragment.setViewModel(mDotViewModel);
 
         expendablelistview.setGroupIndicator(null);
         mAdapter = new MvvmGroupHomeExpandableListAdapter(
@@ -85,6 +84,7 @@ public class GroupHomeExpandableListMvvmFragment extends BaseV4MVPFragment<Mason
                 new ArrayList<MasonryGroupBean>()
         );
         expendablelistview.setAdapter(mAdapter);
+
     }
 
     /*

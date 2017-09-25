@@ -56,7 +56,7 @@ public class CommonMvvmReflectJsoupExpandableListViewModel extends MVVMCommonVie
     * com.open.android.fragment.common.CommonPullToRefreshListFragment#call()
     */
     @Override
-    public MasonryGroupJson call() throws Exception {
+    public synchronized   MasonryGroupJson  call() throws Exception {
         // TODO Auto-generated method stub
         MasonryGroupJson mMArticleJson = new MasonryGroupJson();
         String href = url;
