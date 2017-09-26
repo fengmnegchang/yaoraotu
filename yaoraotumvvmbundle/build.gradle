@@ -36,12 +36,11 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-//        debug {
-////            multiDexEnabled true
-//            ndk {
-//                abiFilters "x86","armeabi"
-//            }
-//        }
+        debug {
+            ndk {
+                abiFilters "x86","armeabi"
+            }
+        }
     }
 }
 

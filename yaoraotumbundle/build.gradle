@@ -17,16 +17,11 @@ version = '1.0.0'
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.1"
-//only if you use Apache packages
-    useLibrary 'org.apache.http.legacy'
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
     }
     dataBinding {
         enabled = true
@@ -36,12 +31,11 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-//        debug {
-////            multiDexEnabled true
-//            ndk {
-//                abiFilters "x86","armeabi"
-//            }
-//        }
+        debug {
+            ndk {
+                abiFilters "x86","armeabi"
+            }
+        }
     }
 }
 
