@@ -58,7 +58,7 @@ public class MasonryPullGridActivity extends CommonTitleBarActivity{
 	public void addfragment() {
 		// TODO Auto-generated method stub
 //		MasonryPullGridFragment fragment =  MasonryPullGridFragment.newInstance(true);
-		ThemePullListHeadFootFragment fragment =  ThemePullListHeadFootFragment.newInstance(true);
+		ThemePullListHeadFootFragment fragment =  ThemePullListHeadFootFragment.newInstance(true,url);
 		getSupportFragmentManager().beginTransaction().replace(R.id.layout_content, fragment).commit();
 		
 		// Create the presenter

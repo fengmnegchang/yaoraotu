@@ -51,7 +51,7 @@ public class MainSlideMenuActivity extends SlidingFragmentActivity {
 		// url = "http://www.umei.cc/bizhitupian/diannaobizhi/7628.htm";
 		// Fragment fragment = UmeiArticlePagerFragment.newInstance(url, true);
 //		Fragment fragment = MIndexPagerFragment.newInstance(url,true);
-		ThemePullListHeadFootFragment fragment = ThemePullListHeadFootFragment.newInstance(true);
+		ThemePullListHeadFootFragment fragment = ThemePullListHeadFootFragment.newInstance(true,url);
 		getSupportFragmentManager().beginTransaction().replace(R.id.layout_viewpager, fragment).commit();
 		new MasonryPullGridPresenterImpl(this, fragment,url);
 
